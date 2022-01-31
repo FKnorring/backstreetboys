@@ -7,14 +7,19 @@
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
-  
+  <script src="https://kit.fontawesome.com/07ba098f8b.js" crossorigin="anonymous"></script>
   <title>Kindlin</title>
 </head>
-<div class="logo" id="logo">
-  <p>Kindlin</p>
-  <p id="subtext" class="subtext">an adventure awaits</p>
-</div>
+
 <body onload="onLoad()">
+  <div class="logo" id="logo">
+    <div class="heart">
+      <i class="fa fa-heart fa"></i>
+    </div>
+    <p>Kindlin</p>
+    <p id="subtext" class="subtext">an adventure awaits</p>
+  </div>
+  
   <div class="buttons" id="buttonContainer">
     <button onclick="location.href='signup.html'"class="button button1" id="button1" >Sign up</button>
     <button onclick="loginButton()" class="button button2" id="button2">Log in</button>

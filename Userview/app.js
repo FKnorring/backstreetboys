@@ -65,5 +65,26 @@ function loginButton() {
   toggle.appendChild(toggleSlider);
   form.appendChild(submit);
   form.appendChild(lostPass);
-  
+}
+
+function unlockButton(){
+  if(document.getElementById("signup").disabled == false){
+    document.getElementById("signup").disabled = true;
+  }else{
+    document.getElementById("signup").disabled = false;
+  }
+}
+
+function checkPassword(input){
+  var password = document.getElementById("pword");
+  if (input.value != password.value) {
+    input.setCustomValidity('Password Must be Matching.');
+  } else {
+    input.setCustomValidity('');
+  }
+}
+
+function termsAndServices(){
+  var textBox = document.getElementById("terms");
+  textBox.style.display = "block";
 }

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <link rel="stylesheet" href="signup.css">
   <script src="app.js" defer></script>
   
@@ -14,19 +14,25 @@
 <body>
     <div class="logo" id="logo"><p>Create Account</p></div>
     <div class="form">
-      <form action="login.html">
-        <label for="name" class="input">Name: </label><br>
-        <input type="text" id="fname" name="fname" placeholder="Your name" class="input"><br><br>
+      <form action="profileView.html" method="get">
+        <label for="name">Name: </label><br>
+        <input type="text" id="fname" name="fname" placeholder="Your name" required><br><br>
         <label for="lname">Email:</label><br>
-        <input type="text" id="lname" name="email" placeholder="Your email"><br><br>
+        <input type="text" id="lname" name="email" placeholder="Your email" required><br><br>
         <label for="pnum">Phone Number:</label><br>
-        <input type="text" id="pnumber" name="phone" placeholder="Your phone number"><br><br>
+        <input type="text" id="pnumber" name="phone" placeholder="Your phone number" required><br><br>
         <label for="pword">Password:</label><br>
-        <input type="password" id="pword" name="pword" placeholder="Password"><br><br>
+        <input type="password" id="pword" name="pword" placeholder="Password" required><br><br>
         <label for="pword">Repeat password:</label><br>
-        <input type="password" id="pword" name="pword" placeholder="Password"><br><br><br><br>
-        <input type="submit" value="Sign Up" class="signup">
+        <input type="password" id="rpword" name="pword" placeholder="Password" oninput="checkPassword(this)" required><br><br>
+        <label fore="termsServices" class="Terms and servicec">I agree to the <button 
+          class="buttonTerms" onclick="termsAndServices()">terms of service</button></label>
+        <input type="checkbox" onclick="unlockButton()"><br><br>
+        <input type="submit" value="Sign Up" id ="signup" class="signup" disabled="true">
       </form>
+    </div>
+    <div id="terms">
+      <p>Ipsum dorem lauren klauren hejsan svejsan</p>
     </div>
 
 </body>
