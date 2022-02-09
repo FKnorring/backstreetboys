@@ -5,11 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "json": "json-server --watch db.json -m ./node_modules/json-server-auth",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.25.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.2",
+    "json-server-auth": "^2.1.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0",

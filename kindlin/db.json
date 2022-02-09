@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "email": "m@m",
+      "password": "$2a$10$8ZBQna/37h2K7eeB.Lr3..0s7hZ.iyp7PkI5wKchW21t/koKPD6ky",
+      "id": 1
+    },
+    {
+      "email": "fille@filip",
+      "password": "$2a$10$H6/2Pj/sP3NEPyzzAcAZNegfl/mzwmTo/BOvF8oET/pa.g7GA8vPm",
+      "username": "filip",
+      "id": 2
+    },
+    {
+      "email": "scam@gmail.com",
+      "password": "$2a$10$wXImV942.tbj8lhtNd.xW.L7gCWllMhb5feaPdP9SoG1ZNRIeKNUC",
+      "username": "NisseP",
+      "id": 3
+    },
+    {
+      "email": "monkey.banana@hotmail.com",
+      "password": "$2a$10$g9sZ3ZM0cDB0vl7tPJ8Ro.aI4MVSAAQGa815qAx04ppaAxg9Htcai",
+      "username": "Monkey",
+      "id": 4
+    },
+    {
+      "email": "s@gmail.com",
+      "password": "$2a$10$.WpfG4WPQC1FytYYCIRp7uZi8/1u1pUhpXa5/pFZbDpui0vQxZctS",
+      "username": "NisseP",
+      "id": 5
+    },
+    {
+      "email": "tjo@tja",
+      "password": "$2a$10$sXc53bxkLhAwbSiMlmHbqugCHh4.UugPAvZ8ORfXS.qvSUDrA3Ps6",
+      "id": 6
+    }
+  ]
+}
