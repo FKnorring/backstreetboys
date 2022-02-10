@@ -9,7 +9,6 @@
   </div>
 </template>
 <script>
-
 import { userService } from "../services/userService";
 
 export default {
@@ -27,14 +26,14 @@ export default {
         password: this.password,
       };
     },
-    handleSubmit(e) {
+    async handleSubmit(e) {
       e.preventDefault();
-      userService.login(this.email, this.password)
+      await userService.login(this.email, this.password);
+      this.$router.push("/profile");
     },
     logout() {
-      userService.logout()
-    }
+      userService.logout();
+    },
   },
 };
-
 </script>

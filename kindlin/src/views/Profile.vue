@@ -1,16 +1,19 @@
 <template>
-  <div >
+  <div>
     <h1>{{ username }}</h1>
     <h2>{{ age }}</h2>
     <h2>{{ gender }}</h2>
     <h2>{{ occupation }}</h2>
-    <input v-model="id" type="text" />
-    <button @click="getUser">get user</button>
     <h2>{{ email }}</h2>
+    <h3>Bio:</h3>
+    <p>{{ bio }}</p>
+    <button @click="removeAcc">Remove Account</button>
   </div>
 </template>
 
 <script>
+import { userService } from "../services/userService";
+
 export default {
   data() {
     return {
@@ -30,19 +33,22 @@ export default {
     };
   },
   methods: {
-    getUser() {
-      fetch(this.path + this.id)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          this.username = data.username;
-          this.email = data.email;
-        });
+    removeAcc() {
+      userService.removeAcc();
+      this.$router.push("/login");
     },
+  },
+  async created() {
+    let user = JSON.parse(localStorage.getItem("user")).user;
+    let profile = await userService.getProfile();
+    this.username = profile.name;
+    this.gender = profile.gender;
+    this.email = user.email;
+    this.occupation = profile.occupation;
+    this.age = profile.age;
+    this.bio = profile.bio;
   },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

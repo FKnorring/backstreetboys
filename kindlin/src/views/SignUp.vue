@@ -13,7 +13,6 @@
   </div>
 </template>
 <script>
-
 import { userService } from "../services/userService";
 
 export default {
@@ -25,10 +24,12 @@ export default {
     };
   },
   methods: {
-    handleSubmit(e) {
+    async handleSubmit(e) {
       e.preventDefault();
       if (this.checkPassword()) {
-        userService.signUp(this.email, this.password);
+        await userService.signUp(this.email, this.password);
+        await userService.login(this.email, this.password);
+        this.$router.push("/completeprofile");
       } else {
         alert("Passwords do not match");
       }

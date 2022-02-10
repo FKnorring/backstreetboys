@@ -5,7 +5,7 @@
     <input type="number" placeholder="Age" v-model="age" min="18" />
     <input type="text" placeholder="Gender" v-model="gender" />
     <input type="text" placeholder="Occupation" v-model="occupation" />
-    <label>Interests: </label><br>
+    <label>Interests: </label><br />
     <textarea
       placeholder="Tell us about yourself!"
       rows="4"
@@ -13,26 +13,31 @@
       max-length="200"
       v-model="bio"
     />
-    <input type="button" @click="getUser" value="Complete my profile!" />
-    <p v-if="msg">{{ msg }}</p>
+    <input type="button" @click="updateProfile" value="Complete my profile!" />
   </div>
 </template>
 <script>
+import { userService } from "../services/userService";
 export default {
   data() {
     return {
-      id: 1,
-      path: "http://localhost:3000/users/",
+      name: "",
       gender: "",
       age: "",
       occupation: "",
-      interest1: "",
-      interest2: "",
-      interest3: "",
-      interest4: "",
-      interest5: "",
       bio: "",
+      userId: -1,
     };
+  },
+  methods: {
+    async updateProfile() {
+      await userService.updateProfile(JSON.stringify(this.$data));
+      console.log(JSON.stringify(this.$data));
+      this.$router.push("/profile");
+    },
+  },
+  created() {
+    this.userId = JSON.parse(localStorage.getItem("user")).user.id;
   },
 };
 </script>
