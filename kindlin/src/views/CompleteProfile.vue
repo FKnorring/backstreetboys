@@ -14,6 +14,7 @@
       v-model="bio"
     />
     <input type="button" @click="updateProfile" value="Complete my profile!" />
+    <p> You can always edit your profile later </p>
   </div>
 </template>
 <script>
@@ -31,8 +32,7 @@ export default {
   },
   methods: {
     async updateProfile() {
-      await userService.updateProfile(JSON.stringify(this.$data));
-      console.log(JSON.stringify(this.$data));
+      await userService.updateProfile(this.$data);
       this.$router.push("/profile");
     },
   },

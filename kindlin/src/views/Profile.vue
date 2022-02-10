@@ -5,7 +5,7 @@
     <h2>{{ gender }}</h2>
     <h2>{{ occupation }}</h2>
     <h2>{{ email }}</h2>
-    <h3>Bio:</h3>
+    <h3>Bio: </h3>
     <p>{{ bio }}</p>
     <button @click="removeAcc">Remove Account</button>
   </div>

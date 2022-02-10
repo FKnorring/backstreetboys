@@ -1,34 +1,47 @@
 {
   "users": [
     {
-      "email": "alex@fooladi",
-      "password": "$2a$10$V86uYFer95TQW3/s3uSeVui83MqNHDDCFiHbeMJ6y2fB8gXPVPN2K",
-      "id": 1
-    },
-    {
       "email": "test@test",
       "password": "$2a$10$qdgEXT4DBddQthifYuqfLuuBdB/U0YMOh3nDsf/oZen/BOgHU4TBe",
       "id": 2
+    },
+    {
+      "email": "a@a",
+      "password": "$2a$10$lbN8OH6cATWt5EXCSlpeBORT/EkitLWckfa4MMhwfq./m7QIZCir.",
+      "id": 3
     }
   ],
   "profiles": [
     {
-      "name": "Alex",
-      "gender": "Male",
-      "age": 22,
-      "occupation": "Student",
-      "bio": "Tjo",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "name": "Test testsson",
-      "gender": "Testmale",
+      "name": "Test",
+      "gender": "testGender",
       "age": "",
-      "occupation": "Testing",
-      "bio": "Tester",
+      "occupation": "Tester",
+      "bio": "Testing",
       "userId": 2,
       "id": 2
     }
+  ],
+  "events": [
+    {
+      "eventUsers": [1,2],
+      "eventName": "Test123",
+      "eventTime": "1337",
+      "eventLocation": "nya ångan",
+      "eventInfo": "xD"
+    },
+    {
+      "eventUsers": [3,4],
+      "eventName": "Test456",
+      "eventTime": "0000",
+      "eventLocation": "gamla ångan",
+      "eventInfo": ";("
+    }
+  ],
+  "previousmatches":[
+    {
+      "userId": 1,
+      "Matches" : [["Nils", "112"],["Dillen", "1177"]]
+    } 
   ]
 }

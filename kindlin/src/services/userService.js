@@ -8,7 +8,19 @@ export const userService = {
   removeAcc,
   updateProfile,
   getProfile,
+  getEvents,
 };
+
+function getEvents() {
+  const requestOptions = {
+    method: "GET",
+    headers: authHeader(),
+  };
+
+  return fetch("http://localhost:3000/events", requestOptions).then(
+    handleResponse
+  );
+}
 
 function signUp(email, password) {
   const requestOptions = {
@@ -87,12 +99,13 @@ function updateProfile(profile) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: profile,
+    body: JSON.stringify(profile),
   };
 
-  return fetch("http://localhost:3000/profiles", requestOptions).then(
-    handleResponse
-  );
+  return fetch(
+    "http://localhost:3000/profiles/",
+    requestOptions
+  ).then(handleResponse);
 }
 
 function getProfile() {
@@ -125,3 +138,9 @@ function handleResponse(response) {
     return data;
   });
 }
+
+/*function getMatches(){
+  let id = JSON.parse(localStorage.getItem("user")).user.id;
+  
+}
+*/

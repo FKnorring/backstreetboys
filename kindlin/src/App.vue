@@ -5,7 +5,8 @@
     <router-link to="/login">Login</router-link> |
     <router-link to="/profile">Profile</router-link> |
     <router-link to="/organizer">Organizer</router-link> |
-    <router-link to="/completeprofile">Complete Profile</router-link>
+    <router-link to="/completeprofile">Complete Profile</router-link> |
+    <router-link to="/previousmatches">Previous Matches</router-link>
   </div>
   <router-view />
 </template>

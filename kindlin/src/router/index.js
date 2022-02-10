@@ -5,6 +5,7 @@ import Login from "../views/Login.vue";
 import Profile from "../views/Profile.vue";
 import CompleteProfile from "../views/CompleteProfile.vue";
 import Organizer from "../views/Organizer.vue";
+import PreviousMatches from "../views/PreviousMatches.vue";
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
     name: "Organizer",
     component: Organizer,
   },
+  {
+    path: "/PreviousMatches",
+    name: "PreviousMatches",
+    component: PreviousMatches,
+  },
 ];
 
 const router = createRouter({
@@ -50,7 +56,8 @@ router.beforeEach((to, from, next) => {
   const loggedIn = localStorage.getItem("user");
 
   if (authRequired && !loggedIn) {
-    return next(from.path);
+    return next();
+    //return next(from.path);
   } else if (loggedIn) {
     return next();
   }
