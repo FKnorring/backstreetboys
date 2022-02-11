@@ -1,47 +1,88 @@
 {
   "users": [
     {
-      "email": "test@test",
-      "password": "$2a$10$qdgEXT4DBddQthifYuqfLuuBdB/U0YMOh3nDsf/oZen/BOgHU4TBe",
-      "id": 2
+      "email": "aaa@111",
+      "password": "$2a$10$LFVbGAFnjqq0uebFvR3FMuUHaRygbImQGKTQq6u9sQk17YdUnRdNy",
+      "profile": [],
+      "id": 1
     },
     {
-      "email": "a@a",
-      "password": "$2a$10$lbN8OH6cATWt5EXCSlpeBORT/EkitLWckfa4MMhwfq./m7QIZCir.",
+      "email": "ccc@333",
+      "password": "$2a$10$4ZgVFdRaqhrstqESDDgK1O7SHX1aINkncJofF.Hm.45teHgFaqSo6",
+      "profile": [],
       "id": 3
+    },
+    {
+      "email": "john@doe",
+      "password": "$2a$10$NMS8KWeIZg2O0P/halPxtOzK/ads3G/UiuMEkFa5rYC8Azr7cjbnC",
+      "profile": [],
+      "id": 4
     }
   ],
   "profiles": [
     {
-      "name": "Test",
-      "gender": "testGender",
-      "age": "",
-      "occupation": "Tester",
-      "bio": "Testing",
-      "userId": 2,
-      "id": 2
+      "name": "aaa111",
+      "gender": "aaa",
+      "age": 111,
+      "occupation": "bbb",
+      "bio": "aaa111",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "ccc",
+      "gender": "ccc",
+      "age": 333,
+      "occupation": "333",
+      "bio": "ccc333",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "name": "John Doe",
+      "gender": "Male",
+      "age": 25,
+      "occupation": "Worker",
+      "bio": "Working",
+      "userId": 4,
+      "id": 4
     }
   ],
   "events": [
     {
-      "eventUsers": [1,2],
+      "eventUsers": [
+        1,
+        2
+      ],
       "eventName": "Test123",
       "eventTime": "1337",
       "eventLocation": "nya ångan",
       "eventInfo": "xD"
     },
     {
-      "eventUsers": [3,4],
+      "eventUsers": [
+        3,
+        4
+      ],
       "eventName": "Test456",
       "eventTime": "0000",
       "eventLocation": "gamla ångan",
       "eventInfo": ";("
     }
   ],
-  "previousmatches":[
+  "previousmatches": [
     {
       "userId": 1,
-      "Matches" : [["Nils", "112"],["Dillen", "1177"]]
-    } 
+      "Matches": [
+        [
+          "Nils",
+          "112"
+        ],
+        [
+          "Dillen",
+          "1177"
+        ]
+      ]
+    }
   ]
 }

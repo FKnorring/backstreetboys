@@ -26,7 +26,7 @@ function signUp(email, password) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ email, password, profile: [] }),
   };
 
   return fetch("http://localhost:3000/users", requestOptions)
@@ -102,23 +102,21 @@ function updateProfile(profile) {
     body: JSON.stringify(profile),
   };
 
-  return fetch(
-    "http://localhost:3000/profiles/",
-    requestOptions
-  ).then(handleResponse);
+  return fetch("http://localhost:3000/profiles/", requestOptions).then(
+    handleResponse
+  );
 }
 
-function getProfile() {
-  let id = JSON.parse(localStorage.getItem("user")).user.id;
-
+function getProfile(id) {
   const requestOptions = {
     method: "GET",
     headers: authHeader(),
   };
 
-  return fetch("http://localhost:3000/profiles/" + id, requestOptions).then(
-    handleResponse
-  );
+  return fetch(
+    "http://localhost:3000/profiles?userId=" + id,
+    requestOptions
+  ).then(handleResponse);
 }
 
 function handleResponse(response) {

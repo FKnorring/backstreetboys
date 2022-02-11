@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h1> My events</h1>
+    <h1>My events</h1>
+    <li v-for="event in events" :key="event">
+      {{ event.eventName }} {{ event.eventTime }} {{ event.eventLocation }}
+    </li>
     <p>{{ secretMessage }}</p>
-    <input type="button" @click="test" value="get my events!" />
-   
   </div>
 </template>
 
@@ -12,17 +13,14 @@ import { userService } from "../services/userService";
 export default {
   data() {
     return {
-      
-      secretMessage: '',
-      username: ''
+      events: [],
+      secretMessage: "",
+      username: "",
     };
   },
-  methods: {
-    test() {
-      console.log(userService.getEvents());
-    },
-    }
-  
-  
+  methods: {},
+  async created() {
+    this.events = await userService.getEvents();
+  },
 };
 </script>
