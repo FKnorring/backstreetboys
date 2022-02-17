@@ -3,20 +3,53 @@
     {
       "email": "aaa@111",
       "password": "$2a$10$LFVbGAFnjqq0uebFvR3FMuUHaRygbImQGKTQq6u9sQk17YdUnRdNy",
-      "profile": [],
       "id": 1
     },
     {
       "email": "ccc@333",
       "password": "$2a$10$4ZgVFdRaqhrstqESDDgK1O7SHX1aINkncJofF.Hm.45teHgFaqSo6",
-      "profile": [],
       "id": 3
     },
     {
       "email": "john@doe",
       "password": "$2a$10$NMS8KWeIZg2O0P/halPxtOzK/ads3G/UiuMEkFa5rYC8Azr7cjbnC",
-      "profile": [],
       "id": 4
+    },
+    {
+      "email": "n@gmail.com",
+      "password": "$2a$10$YlPJVG7Lq1gtzX9PT4fBtOHNsH8.RpP527sbJ2DkXaBcvefqkhGx.",
+      "profile": [],
+      "id": 5
+    },
+    {
+      "email": "jacob@dillström",
+      "password": "$2a$10$xWSKNCWntvsD5vFcGmPn0e/MuxFrvZi6DbbaeCENP55nPb/vaCPy2",
+      "profile": [],
+      "id": 6
+    },
+    {
+      "email": "test@test",
+      "password": "$2a$10$DCveidmb3SkuiI6dBGqgPeeff4IktOSItLUxNREnH97PWuy6tIrxq",
+      "profile": [],
+      "id": 7
+    },
+    {
+      "email": "match@guy",
+      "password": "$2a$10$e0p.yqGCujJn/hc262pngukkujIuIt07SNYaQhxIPhXPEH.YRFKz6",
+      "profile": [],
+      "id": 8
+    },
+    {
+      "email": "match@girl",
+      "password": "$2a$10$lEt5i2XSVAhamI2GgT.VE.P2uamSVxigIaAujJx0h5PCMBW8MeMDK",
+      "profile": [],
+      "id": 9
+    },
+    {
+      "email": "erik@erik",
+      "password": "$2a$10$r0XC0HHCefGgoJ95yAfDoeo0y51i9g3G4XjycrT/ye89LtZMcGF.a",
+      "profile": [],
+      "id": 10
     }
   ],
   "profiles": [
@@ -46,43 +79,338 @@
       "bio": "Working",
       "userId": 4,
       "id": 4
+    },
+    {
+      "name": "AAA",
+      "gender": "",
+      "age": "",
+      "occupation": "",
+      "bio": "Hej",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "AAA",
+      "gender": "Male",
+      "age": 22,
+      "occupation": "Student",
+      "bio": "C++",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "Nils",
+      "gender": "Male",
+      "phonenumber": 112,
+      "age": 21,
+      "occupation": "Student",
+      "bio": "Hola mi amigos, me llamo Nils y tienes 21 år",
+      "userId": 5,
+      "id": 7,
+      "myEvents": [
+        4
+      ]
+    },
+    {
+      "name": "Jacob Dillström",
+      "gender": "Male",
+      "phonenumber": 8273983492,
+      "age": 22,
+      "occupation": "Student",
+      "bio": "Hej jag gillar pingis!",
+      "userId": 6,
+      "id": 8,
+      "myEvents": [
+        1
+      ]
+    },
+    {
+      "0": {
+        "name": "Karen",
+        "gender": "Female",
+        "phonenumber": 8273983492,
+        "age": 22,
+        "occupation": "Student",
+        "bio": "Hej jag gillar pingis!",
+        "userId": 7,
+        "id": 9,
+        "myEvents": [
+          1,
+          2
+        ]
+      },
+      "id": 9
+    },
+    {
+      "name": "",
+      "gender": "",
+      "phonenumber": "",
+      "age": "",
+      "occupation": "",
+      "interests": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "selectedInterests": 5,
+      "bio": "",
+      "userId": 6,
+      "id": 11
+    },
+    {
+      "name": "Filip",
+      "gender": "",
+      "phonenumber": "0736283322",
+      "age": 22,
+      "occupation": "Student",
+      "interests": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "bio": "Tjo",
+      "myEvents": [],
+      "userId": 6,
+      "id": 12
+    },
+    {
+      "name": "Match Man",
+      "gender": "",
+      "phonenumber": "112",
+      "age": 38,
+      "occupation": "Matching",
+      "interests": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "bio": "Matchcheee",
+      "myEvents": [],
+      "userId": 8,
+      "id": 13
+    },
+    {
+      "name": "Match Girl",
+      "gender": "volvo",
+      "phonenumber": "193",
+      "age": 28,
+      "occupation": "Matchymatchmatch",
+      "interests": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "weights": [
+        0,
+        6,
+        0,
+        0,
+        0,
+        1,
+        0,
+        6,
+        6,
+        0,
+        1,
+        1,
+        7,
+        7,
+        0
+      ],
+      "bio": "Mathus",
+      "myEvents": [
+        4
+      ],
+      "userId": 9,
+      "id": 14
+    },
+    {
+      "name": "erik",
+      "gender": "Male",
+      "phonenumber": "0760503839",
+      "age": 18,
+      "occupation": "kalle",
+      "interests": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "kshfei",
+      "myEvents": [],
+      "userId": 10,
+      "id": 15
     }
   ],
   "events": [
     {
-      "eventUsers": [
-        1,
-        2
-      ],
-      "eventName": "Test123",
+      "eventUsers": [],
+      "eventName": "Sommaräng",
       "eventTime": "1337",
       "eventLocation": "nya ångan",
-      "eventInfo": "xD"
+      "eventInfo": "xD",
+      "id": 2
+    },
+    {
+      "eventUsers": [],
+      "eventName": "Lasse Krök",
+      "eventTime": "Snart?",
+      "eventLocation": "Lasser",
+      "eventInfo": "Mums",
+      "id": 3
     },
     {
       "eventUsers": [
-        3,
-        4
+        9,
+        5
       ],
-      "eventName": "Test456",
-      "eventTime": "0000",
-      "eventLocation": "gamla ångan",
-      "eventInfo": ";("
+      "eventName": "Stocken Förkrök",
+      "eventTime": "Ikväll",
+      "eventLocation": "Hos lasse",
+      "eventInfo": "Lessss goooo",
+      "id": 4
     }
   ],
   "previousmatches": [
     {
-      "userId": 1,
-      "Matches": [
-        [
-          "Nils",
-          "112"
-        ],
-        [
-          "Dillen",
-          "1177"
-        ]
+      "userId": 6,
+      "id": 6,
+      "matches": [
+        7,
+        4,
+        6
+      ]
+    },
+    {
+      "userId": 5,
+      "id": 7,
+      "matches": [
+        4,
+        6
+      ]
+    },
+    {
+      "userId": 7,
+      "matches": [
+        4,
+        6,
+        5
       ]
     }
-  ]
+  ],
+  "stage": {
+    "started": false,
+    "stage": 3,
+    "state": "waiting"
+  }
 }

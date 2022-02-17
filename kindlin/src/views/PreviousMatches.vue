@@ -7,32 +7,36 @@
 </template>
 
 <script>
-//import { userService } from "../services/userService";
+import { userService } from "../services/userService";
 
 export default{
     data(){
         return{
+            userId : 1,
             matches: []
-        }
+        } 
     },
-    created() {
-        //let user = JSON.parse(localStorage.getItem("user")).user;
-        
-        this.matches =[
-            {
-                name : "Kalle Anka",
-                number : "112"
-            },
-            {
-                name : "Donald Trump",
-                number: "1177"
-            }
-        ]
+    async created() {
+    let user = JSON.parse(localStorage.getItem("user")).user;
+    let profile = await userService.getMatches(user.id);
+    let matchIds = profile[0].matches;
+    
+    for(var match of matchIds){
+        let matchedProfile = await userService.getProfile(match);
+        let matchedName = matchedProfile[0].name;
+        let matchedNumber = matchedProfile[0].phonenumber;
+        let matchedInfo = {name : matchedName, number: matchedNumber};
+        this.matches.push(matchedInfo);
     }
-
+    }
 }
 </script>
 
 <style scoped>
-
+.matches{
+    border-style:solid;
+    width:70%;
+    margin:auto;
+    margin-top: 2em;    
+}
 </style>

@@ -18,6 +18,7 @@ import { userService } from "../services/userService";
 export default {
   data() {
     return {
+      email: "",
       password: "",
       password_repeat: "",
       msg: "",

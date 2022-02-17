@@ -6,9 +6,17 @@ export const userService = {
   logout,
   getAll,
   removeAcc,
+  makeProfile,
   updateProfile,
+  updateEvent,
+  updateStage,
   getProfile,
   getEvents,
+  getEvent,
+  getMatches,
+  getStage,
+  addEvent,
+  removeEvent,
 };
 
 function getEvents() {
@@ -21,6 +29,31 @@ function getEvents() {
     handleResponse
   );
 }
+
+function addEvent(event) {
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(event),
+  };
+  console.log("hej");
+  return fetch("http://localhost:3000/events/", requestOptions).then(
+    handleResponse
+  );
+}
+
+function removeEvent(id) {
+  
+  const requestOptions = {
+    method: "DELETE",
+    headers: authHeader(),
+  };
+  console.log(id);
+  return fetch("http://localhost:3000/events/" + id, requestOptions).then(
+    handleResponse
+  );
+}
+
 
 function signUp(email, password) {
   const requestOptions = {
@@ -95,7 +128,7 @@ function removeAcc() {
   );
 }
 
-function updateProfile(profile) {
+function makeProfile(profile) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -119,6 +152,76 @@ function getProfile(id) {
   ).then(handleResponse);
 }
 
+function getMatches(id) {
+  const requestOptions = {
+    method: "GET",
+    headers: authHeader(),
+  };
+
+  return fetch(
+    "http://localhost:3000/previousmatches?userId=" + id,
+    requestOptions
+  ).then(handleResponse);
+}
+
+function getEvent(id) {
+  const requestOptions = {
+    method: "GET",
+    headers: authHeader(),
+  };
+
+  return fetch(
+    "http://localhost:3000/events?id=" + id,
+    requestOptions
+  ).then(handleResponse);
+}
+
+function updateEvent(event, id) {
+  const requestOptions = {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(event),
+  };
+  return fetch("http://localhost:3000/events/" + id, requestOptions).then(
+    handleResponse
+  );
+}
+
+function updateProfile(profile, id) {
+  const requestOptions = {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(profile),
+  };
+  return fetch("http://localhost:3000/profiles/" + id, requestOptions).then(
+    handleResponse
+  );
+}
+
+function getStage() {
+  const requestOptions = {
+    method: "GET",
+    headers: authHeader()
+  };
+
+  return fetch(
+    "http://localhost:3000/stage",
+    requestOptions
+  ).then(handleResponse);
+}
+
+function updateStage(stage) {
+  const requestOptions = {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(stage),
+  }
+
+  return fetch("http://localhost:3000/stage", requestOptions).then(
+    handleResponse
+  );
+}
+
 function handleResponse(response) {
   return response.text().then((text) => {
     const data = text && JSON.parse(text);
@@ -137,8 +240,3 @@ function handleResponse(response) {
   });
 }
 
-/*function getMatches(){
-  let id = JSON.parse(localStorage.getItem("user")).user.id;
-  
-}
-*/
