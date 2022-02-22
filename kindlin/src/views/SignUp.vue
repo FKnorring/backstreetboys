@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-import { userService } from "../services/userService";
+import { dbService } from "../services/dbservice";
 
 export default {
   data() {
@@ -28,8 +28,8 @@ export default {
     async handleSubmit(e) {
       e.preventDefault();
       if (this.checkPassword()) {
-        await userService.signUp(this.email, this.password);
-        await userService.login(this.email, this.password);
+        await dbService.signUp(this.email, this.password);
+        await dbService.login(this.email, this.password);
         this.$router.push("/completeprofile");
       } else {
         alert("Passwords do not match");

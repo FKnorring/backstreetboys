@@ -41,7 +41,7 @@
   </div>
 </template>
 <script>
-import { userService } from "../services/userService";
+import { dbService } from "../services/dbservice";
 import Interests from "../components/Interests.vue";
 export default {
   data() {
@@ -61,7 +61,7 @@ export default {
   methods: {
     async makeProfile() {
       if (this.selectedInterests == 5) {
-        await userService.makeProfile(this.getProfileData());
+        await dbService.makeProfile(this.getProfileData());
         this.$router.push("/profile");
       } else {
         alert("Select 5 interests");

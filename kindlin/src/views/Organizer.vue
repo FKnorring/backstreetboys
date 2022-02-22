@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { userService } from "../services/userService";
+import { dbService } from "../services/dbservice";
 import Header from "../components/Header";
 import Events from "../components/Events";
 import Button from "../components/Button";
@@ -48,27 +48,27 @@ export default {
       console.log(event);
       this.events = [...this.events, event];
       console.log(this.event);
-      userService.addEvent(event);
+      dbService.addEvent(event);
       
     },
     deleteEvent(id) {
       if (confirm("Are you sure?")) {
         this.events = this.events.filter((event) => event.id !== id);
-         userService.removeEvent(id);
+         dbService.removeEvent(id);
       }
     },
     async showUser(id) {
       if (this.userId === id) {
         return (this.userId = -1);
       }
-      const profile = await userService.getProfile(id);
+      const profile = await dbService.getProfile(id);
       this.profile = profile[0];
       this.userId = id;
     },
   },
 
   async created() {
-    this.events = await userService.getEvents(); //hämta events;
+    this.events = await dbService.getEvents(); //hämta events;
     
   },
 };

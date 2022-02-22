@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { userService } from "../services/userService";
+import { dbService } from "../services/dbservice";
 export default {
   data() {
     return {
@@ -24,30 +24,29 @@ export default {
   methods: {
     async signUp(id) {
       let user = JSON.parse(localStorage.getItem("user")).user;
-      let profile = await userService.getProfile(user.id);
+      let profile = await dbService.getProfile(user.id);
       let myEventIds = profile[0].myEvents; //My Event Ids --> Lägg till id här.
       let profileId = profile[0].id;
       myEventIds.push(id);
       profile[0].myEvents = myEventIds;
-      await userService.updateProfile(profile[0], profileId);
-      
-      //Hämta och joina ett event
-      let event = await userService.getEvent(id);
-      let eventAttenders = event[0].eventUsers;
-      eventAttenders.push(user.id);
-      event[0].eventUsers = eventAttenders;
-      console.log(event[0]);
-      await userService.updateEvent(event[0], id);
+      await dbService.updateProfile(profile[0], profileId);
 
-      let updatedEvents = this.myEvents.filter(ids => ids.id != id);
+      //Hämta och joina ett event
+      let event = await dbService.getEvent(id);
+      let eventAttenders = event.eventUsers;
+      eventAttenders.push(user.id);
+      event.eventUsers = eventAttenders;
+      await dbService.updateEvent(event, id);
+
+      let updatedEvents = this.myEvents.filter((ids) => ids.id != id);
       this.myEvents = updatedEvents;
     },
   },
   async created() {
-    let events = await userService.getEvents(); //hämta events;
-
+    let events = await dbService.getEvents(); //hämta events;
+    console.log(events);
     let user = JSON.parse(localStorage.getItem("user")).user;
-    let profile = await userService.getProfile(user.id);
+    let profile = await dbService.getProfile(user.id);
     let myEventIds = profile[0].myEvents; //My events Ids
 
     for (var currentEvent of events) {

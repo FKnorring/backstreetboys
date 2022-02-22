@@ -1,15 +1,15 @@
 <template>
-  <div class = "event">
-    <h3   @dbclick="onEventClick(event.id)">
   
+  <div @click="showEvent = true" class = "event">
+  <div class="eventInfo">
+    <h3>
      {{ event.eventName }}
       <fa @click="onDeleteEvent(event.id)" class="icon" icon="times"/>
-      
     </h3>
     <p>{{event.eventTime}}</p>
+    </div>
   </div>
-</template>
-
+  
 <script>
 
 
@@ -22,11 +22,19 @@ export default {
     onDeleteEvent(id){
       this.$emit('delete-event', id);
     },
+    onEventClick(){
+      console.log("TJO");
+    },
   },
 };
 </script>
 
 <style scoped>
+.eventInfo{
+  
+}
+
+
 .icon {
   color: red;
 }
@@ -34,6 +42,7 @@ export default {
   background: skyblue;
   margin: 5px;
   padding: 10px 10px;
+  border-radius: 25px;
   cursor: pointer;
   justify-content: center;
 

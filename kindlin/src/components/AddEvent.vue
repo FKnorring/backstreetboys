@@ -31,7 +31,10 @@ export default{
    name: "AddEvent",
    data() {
        return {
-           eventUsers: [],
+           eventUsersMale: [],
+           activeUsersMale: [],
+           eventUsersFemale: [],
+           activeUsersFemale: [],
            eventName: '',
            eventLocation: '',
            eventInfo: '',
@@ -48,18 +51,25 @@ export default{
        } 
        
        const newEvent = {
-         eventUsers: this.eventUsers,
+         eventUsersMale: this.eventUsersMale,
+         activeUsersMale: this.activeUsersMale,
+         eventUsersFemale: this.eventUsersFemale,
+         activeUsersFemale: this.activeUsersFemale,
          eventName: this.eventName,
          eventTime: this.eventTime,
          eventLocation: this.eventLocation,
          eventInfo: this.eventInfo,
        }
        this.$emit('add-event', newEvent)
-       this.eventUsers = []
+       this.eventUsersMale = []
+       this.activeUsersMale = []
+       this.eventUsersFemale = []
+       this.activeUsersFemale = []
        this.eventName = ''
        this.eventLocation = ''
        this.eventInfo = ''
        this.eventTime = ''
+       
      }
    }
 }

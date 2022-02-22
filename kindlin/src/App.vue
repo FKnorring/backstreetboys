@@ -19,12 +19,12 @@
   <router-view />
 </template>
 <script>
-import { userService } from "./services/userService";
+import { dbService } from "./services/dbservice";
 
 export default {
   data() {
     return {
-      username: "Not logged in",
+      username: "",
     };
   },
   methods: {
@@ -44,20 +44,25 @@ export default {
 
     async getUser(user) {
       if (user) {
-        let profile = await userService.getProfile(user.id);
-        return (this.username = profile[0].name);
+        let profile = await dbService.getProfile(user.id);
+        return profile.name;
+      }
+    },
+    async getUsername() {
+      let loggedIn = JSON.parse(localStorage.getItem("user"));
+      if (loggedIn) {
+        return await this.getUser(loggedIn.user);
+      } else {
+        return "Not logged in";
       }
     },
   },
-  created() {},
+  async created() {
+    this.username = await this.getUsername();
+  },
   watch: {
-    $route() {
-      let loggedIn = JSON.parse(localStorage.getItem("user"));
-      if (loggedIn) {
-        this.username = this.getUser(loggedIn.user);
-      } else {
-        this.username = "Not logged in";
-      }
+    username: async function () {
+      return await this.getUsername();
     },
   },
 };

@@ -1,5 +1,6 @@
 <template>
   <h1>{{ stage }}</h1>
+  <button @click="incrStage()"></button>
   <div v-show="page === 'wait'" class="waiting-screen">
     <fa @click="page = 'map'" class="map" icon="map" />
     <fa @click="page = 'match'" class="user" icon="user" />
@@ -28,7 +29,7 @@
 </template>
 
 <script>
-import { userService } from "../services/userService";
+import { dbService } from "../services/dbservice";
 
 export default {
   data() {
@@ -46,13 +47,19 @@ export default {
   methods: {
     async updateWeights() {
       this.profile.weights = this.newWeights;
-      await userService.updateProfile(this.profile, this.profile.id);
+      await dbService.updateProfile(this.profile, this.profile.id);
+    },
+    incrStage() {
+      console.log(this.stage);
+      let stage = { started: false, stage: 3, state: "waiting" };
+      dbService.updateStage(stage);
     },
   },
   async created() {
-    this.match = (await userService.getProfile(8))[0];
+    this.match = (await dbService.getProfile(8))[0];
     let user = JSON.parse(localStorage.getItem("user")).user;
-    this.profile = (await userService.getProfile(user.id))[0];
+    this.profile = (await dbService.getProfile(user.id))[0];
+    this.stage = await dbService.getStage();
   },
   computed: {
     newWeight: function () {
@@ -88,6 +95,13 @@ export default {
       } else {
         return null;
       }
+    },
+  },
+  watch: {
+    stage: async function () {
+      let stage = await dbService.getStage();
+      console.log(stage);
+      return stage;
     },
   },
 };

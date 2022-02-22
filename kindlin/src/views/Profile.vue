@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { userService } from "../services/userService";
+import { dbService } from "../services/dbservice";
 
 export default {
   data() {
@@ -34,13 +34,13 @@ export default {
   },
   methods: {
     removeAcc() {
-      userService.removeAcc();
+      dbService.removeAcc();
       this.$router.push("/login");
     },
   },
   async created() {
     let user = JSON.parse(localStorage.getItem("user")).user;
-    let profile = await userService.getProfile(user.id);
+    let profile = await dbService.getProfile(user.id);
     this.username = profile[0].name;
     this.gender = profile[0].gender;
     this.email = user.email;

@@ -40,12 +40,6 @@
       "id": 8
     },
     {
-      "email": "match@girl",
-      "password": "$2a$10$lEt5i2XSVAhamI2GgT.VE.P2uamSVxigIaAujJx0h5PCMBW8MeMDK",
-      "profile": [],
-      "id": 9
-    },
-    {
       "email": "erik@erik",
       "password": "$2a$10$r0XC0HHCefGgoJ95yAfDoeo0y51i9g3G4XjycrT/ye89LtZMcGF.a",
       "profile": [],
@@ -55,7 +49,7 @@
   "profiles": [
     {
       "name": "aaa111",
-      "gender": "aaa",
+      "gender": "Female",
       "age": 111,
       "occupation": "bbb",
       "bio": "aaa111",
@@ -64,7 +58,7 @@
     },
     {
       "name": "ccc",
-      "gender": "ccc",
+      "gender": "Male",
       "age": 333,
       "occupation": "333",
       "bio": "ccc333",
@@ -81,13 +75,18 @@
       "id": 4
     },
     {
-      "name": "AAA",
-      "gender": "",
-      "age": "",
-      "occupation": "",
-      "bio": "Hej",
-      "userId": 1,
-      "id": 5
+      "name": "Nils",
+      "gender": "Male",
+      "phonenumber": 112,
+      "age": 21,
+      "occupation": "Student",
+      "bio": "Hola mi amigos, me llamo Nils y tienes 21 år",
+      "userId": 5,
+      "id": 5,
+      "myEvents": [
+        6
+      ],
+      "weights": null
     },
     {
       "name": "AAA",
@@ -96,6 +95,7 @@
       "occupation": "Student",
       "bio": "C++",
       "userId": 1,
+      "myEvents": [],
       "id": 6
     },
     {
@@ -107,9 +107,8 @@
       "bio": "Hola mi amigos, me llamo Nils y tienes 21 år",
       "userId": 5,
       "id": 7,
-      "myEvents": [
-        4
-      ]
+      "myEvents": [],
+      "weights": null
     },
     {
       "name": "Jacob Dillström",
@@ -120,33 +119,14 @@
       "bio": "Hej jag gillar pingis!",
       "userId": 6,
       "id": 8,
-      "myEvents": [
-        1
-      ]
+      "myEvents": []
     },
     {
-      "0": {
-        "name": "Karen",
-        "gender": "Female",
-        "phonenumber": 8273983492,
-        "age": 22,
-        "occupation": "Student",
-        "bio": "Hej jag gillar pingis!",
-        "userId": 7,
-        "id": 9,
-        "myEvents": [
-          1,
-          2
-        ]
-      },
-      "id": 9
-    },
-    {
-      "name": "",
-      "gender": "",
-      "phonenumber": "",
-      "age": "",
-      "occupation": "",
+      "name": "Sara",
+      "gender": "Female",
+      "phonenumber": "030",
+      "age": "12",
+      "occupation": "Hej",
       "interests": [
         false,
         false,
@@ -171,7 +151,7 @@
     },
     {
       "name": "Filip",
-      "gender": "",
+      "gender": "Male",
       "phonenumber": "0736283322",
       "age": 22,
       "occupation": "Student",
@@ -260,53 +240,6 @@
       "id": 13
     },
     {
-      "name": "Match Girl",
-      "gender": "volvo",
-      "phonenumber": "193",
-      "age": 28,
-      "occupation": "Matchymatchmatch",
-      "interests": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        false
-      ],
-      "weights": [
-        0,
-        6,
-        0,
-        0,
-        0,
-        1,
-        0,
-        6,
-        6,
-        0,
-        1,
-        1,
-        7,
-        7,
-        0
-      ],
-      "bio": "Mathus",
-      "myEvents": [
-        4
-      ],
-      "userId": 9,
-      "id": 14
-    },
-    {
       "name": "erik",
       "gender": "Male",
       "phonenumber": "0760503839",
@@ -347,38 +280,46 @@
         0
       ],
       "bio": "kshfei",
-      "myEvents": [],
+      "myEvents": [
+        6
+      ],
       "userId": 10,
       "id": 15
     }
   ],
   "events": [
     {
-      "eventUsers": [],
-      "eventName": "Sommaräng",
-      "eventTime": "1337",
-      "eventLocation": "nya ångan",
-      "eventInfo": "xD",
-      "id": 2
-    },
-    {
-      "eventUsers": [],
-      "eventName": "Lasse Krök",
-      "eventTime": "Snart?",
-      "eventLocation": "Lasser",
-      "eventInfo": "Mums",
-      "id": 3
-    },
-    {
       "eventUsers": [
-        9,
+        5,
+        10
+      ],
+      "activeUsers": [
+        10,
         5
       ],
-      "eventName": "Stocken Förkrök",
-      "eventTime": "Ikväll",
-      "eventLocation": "Hos lasse",
-      "eventInfo": "Lessss goooo",
-      "id": 4
+      "eventName": "Hej",
+      "eventTime": "hj",
+      "eventLocation": "123",
+      "eventInfo": "8484",
+      "id": 6
+    },
+    {
+      "eventUsers": [],
+      "activeUsers": [],
+      "eventName": "Test",
+      "eventTime": "234",
+      "eventLocation": "hej",
+      "eventInfo": "ggg",
+      "id": 7
+    },
+    {
+      "eventUsers": [],
+      "activeUsers": [],
+      "eventName": "Removetest",
+      "eventTime": "remove",
+      "eventLocation": "remove",
+      "eventInfo": "remove",
+      "id": 8
     }
   ],
   "previousmatches": [
