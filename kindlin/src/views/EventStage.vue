@@ -36,7 +36,7 @@ export default {
     return {
       matchId: "",
       stage: {},
-      page: "review",
+      page: "wait",
       value1: 4,
       value2: 4,
       value3: 4,
@@ -51,7 +51,7 @@ export default {
     },
     incrStage() {
       console.log(this.stage);
-      let stage = { started: false, stage: 3, state: "waiting" };
+      let stage = { event: 10, started: false, stage: 3, state: "waiting" };
       dbService.updateStage(stage);
     },
   },
@@ -100,7 +100,6 @@ export default {
   watch: {
     stage: async function () {
       let stage = await dbService.getStage();
-      console.log(stage);
       return stage;
     },
   },

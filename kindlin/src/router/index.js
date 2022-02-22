@@ -7,7 +7,8 @@ import CompleteProfile from "../views/CompleteProfile.vue";
 import Organizer from "../views/Organizer.vue";
 import PreviousMatches from "../views/PreviousMatches.vue";
 import UpcomingEvents from "../views/UpcomingEvents.vue";
-import EventStage from "../views/EventStage.vue"
+import EventStage from "../views/EventStage.vue";
+
 
 const routes = [
   {

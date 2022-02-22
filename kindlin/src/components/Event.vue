@@ -1,36 +1,69 @@
 <template>
-  
-  <div @click="showEvent = true" class = "event">
-  <div class="eventInfo">
+  <div @click="toggleShow()" class="event">
     <h3>
-     {{ event.eventName }}
-      <fa @click="onDeleteEvent(event.id)" class="icon" icon="times"/>
+      {{ event.eventName }}
+      
+      <fa @click="onDeleteEvent(event.id)" class="icon" icon="times" />
     </h3>
-    <p>{{event.eventTime}}</p>
-    </div>
+    <Button  text="Go to event" color ="teal"/>
+    
+    <p>{{ computedDate }}</p>
+    <div v-if="showEvent" class="eventInfo">
+     
+      <p> Registered Females {{ event.eventUsersFemale.length }}/10</p>
+      <p > Registered Males {{ event.eventUsersMale.length }}/10 </p>
+      {{ event.eventInfo }}
+      {{ event.location }}
+     </div>
   </div>
-  
+</template>
+
+
 <script>
-
-
+import Button from "./Button"
 export default {
+  data() {
+    return {
+      showEvent: false,
+    };
+  },
   name: "Event",
   props: {
     event: Object,
   },
-  methods:{
-    onDeleteEvent(id){
-      this.$emit('delete-event', id);
+  components: {
+    Button,
+  },
+  methods: {
+    onDeleteEvent(id) {
+      this.$emit("delete-event", id);
     },
-    onEventClick(){
+    onEventClick() {
       console.log("TJO");
+    },
+    toggleShow() {
+      this.showEvent = !this.showEvent;
+    },
+  },
+  computed: {
+    computedDate: function () {
+      let date = new Date(this.event.eventTime);
+      return date.toString();
     },
   },
 };
 </script>
 
+
+
 <style scoped>
-.eventInfo{
+.eventInfo {
+  color:black;
+  justify-content: center;
+  display: inline-block;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
   
 }
 
@@ -39,18 +72,18 @@ export default {
   color: red;
 }
 .event {
+  color:black;
   background: skyblue;
   margin: 5px;
   padding: 10px 10px;
-  border-radius: 25px;
+  border-radius: 5px;
   cursor: pointer;
   justify-content: center;
-
+  z-index: 99;
 }
 .event h3 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 </style>

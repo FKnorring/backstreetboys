@@ -24,6 +24,7 @@ import Button from "../components/Button";
 import AddEvent from "../components/AddEvent";
 
 export default {
+  
   name: "Organizer",
   components: {
     Header,
