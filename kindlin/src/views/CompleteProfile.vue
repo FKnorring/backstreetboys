@@ -74,6 +74,7 @@
 </template>
 <script>
 import { dbService } from "../services/dbservice";
+import { firestoreDB } from "../services/db";
 import Interests from "../components/profile/Interests.vue";
 import GenderSelect from "../components/profile/GenderSelect.vue";
 export default {
@@ -96,7 +97,8 @@ export default {
   methods: {
     async makeProfile() {
       if (this.selectedInterests == 5) {
-        await dbService.makeProfile(this.getProfileData());
+        //await dbService.makeProfile(this.getProfileData());
+        await firestoreDB.addProfile(this.getProfileData());
         this.$router.push("/profile");
       } else {
         alert("Select 5 interests");

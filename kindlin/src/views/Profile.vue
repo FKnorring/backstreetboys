@@ -32,6 +32,7 @@
 
 <script>
 import { dbService } from "../services/dbservice";
+import { firestoreDB } from "../services/db";
 import Interests from "../components/profile/Interests.vue";
 
 export default {
@@ -57,7 +58,8 @@ export default {
   },
   async created() {
     this.user = JSON.parse(localStorage.getItem("user")).user;
-    let profile = await dbService.getProfile(this.user.id);
+    //let profile = await dbService.getProfile(this.user.id);
+    let profile = await firestoreDB.getProfile(this.user.id);
     this.username = profile[0].name;
     this.gender = profile[0].gender;
     this.email = this.user.email;

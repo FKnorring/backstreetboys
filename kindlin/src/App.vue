@@ -23,6 +23,7 @@
 </template>
 <script>
 import { dbService } from "./services/dbservice";
+import { firestoreDB } from "./services/db";
 
 export default {
   data() {
@@ -47,7 +48,8 @@ export default {
 
     async getUser(user) {
       if (user) {
-        let profile = await dbService.getProfile(user.id);
+        //let profile = await dbService.getProfile(user.id);
+        let profile = await firestoreDB.getProfile(user.id);
         return profile.name;
       }
     },

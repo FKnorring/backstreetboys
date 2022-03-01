@@ -13,6 +13,7 @@
 
 <script>
 import { dbService } from "../services/dbservice";
+import { firestoreDB } from "../services/db";
 export default {
   data() {
     return {
@@ -24,8 +25,10 @@ export default {
   methods: {
     async signUp(id) {
       let user = JSON.parse(localStorage.getItem("user")).user;
-      let profile = await dbService.getProfile(user.id);
-      let event = await dbService.getEvent(id);
+      //let profile = await dbService.getProfile(user.id);
+      let profile = await firestoreDB.getProfile(user.id);
+      //let event = await dbService.getEvent(id);
+      let event = await firestoreDB.getEvent(id);
       let eventAttendersMale = event.eventUsersMale;
       let eventAttendersFemale = event.eventUsersFemale;
 
@@ -34,13 +37,16 @@ export default {
         let profileId = profile[0].id;
         myEventIds.push(id);
         profile[0].myEvents = myEventIds;
-        await dbService.updateProfile(profile[0], profileId);
+        //await dbService.updateProfile(profile[0], profileId);
+        await firestoreDB.updateProfile(profile[0], profileId);
 
-        let event = await dbService.getEvent(id);
+        //let event = await dbService.getEvent(id);
+        let event = await firestoreDB.getEvent(id);
         let eventAttenders = event.eventUsersMale;
         eventAttenders.push(user.id);
         event.eventUsersMale = eventAttenders;
-        await dbService.updateEvent(event, id);
+        //await dbService.updateEvent(event, id);
+        await firestoreDB.updateEvent(event, id);
 
         let updatedEvents = this.myEvents.filter((ids) => ids.id != id);
         this.myEvents = updatedEvents;
@@ -52,13 +58,16 @@ export default {
         let profileId = profile[0].id;
         myEventIds.push(id);
         profile[0].myEvents = myEventIds;
-        await dbService.updateProfile(profile[0], profileId);
+        //await dbService.updateProfile(profile[0], profileId);
+        await firestoreDB.updateProfile(profile[0], profileId);
 
-        let event = await dbService.getEvent(id);
+        //let event = await dbService.getEvent(id);
+        let event = await firestoreDB.getEvent(id);
         let eventAttenders = event.eventUsersFemale;
         eventAttenders.push(user.id);
         event.eventUsersFemale = eventAttenders;
-        await dbService.updateEvent(event, id);
+        //await dbService.updateEvent(event, id);
+        await firestoreDB.updateEvent(event, id);
 
         let updatedEvents = this.myEvents.filter((ids) => ids.id != id);
         this.myEvents = updatedEvents;
@@ -68,9 +77,11 @@ export default {
     },
   },
   async created() {
-    let events = await dbService.getEvents(); //hämta events;
+    //let events = await dbService.getEvents(); //hämta events;
+    let events = await firestoreDB.getEvents(); //hämta events;
     let user = JSON.parse(localStorage.getItem("user")).user;
-    let profile = await dbService.getProfile(user.id);
+    //let profile = await dbService.getProfile(user.id);
+    let profile = await firestoreDB.getProfile(user.id);
     let myEventIds = profile[0].myEvents; //My events Ids
 
     for (var currentEvent of events) {

@@ -24,6 +24,7 @@
 
 <script>
 import { dbService } from "../services/dbservice";
+import { firestoreDB } from "../services/db";
 export default {
   data() {
     return {
@@ -35,18 +36,21 @@ export default {
   methods: {
     async leaveEvent(id) {
       let user = JSON.parse(localStorage.getItem("user")).user;
-      let profile = await dbService.getProfile(user.id);
+      //let profile = await dbService.getProfile(user.id);
+      let profile = await firestoreDB.getProfile(user.id);
       let myEventIds = profile[0].myEvents; //My Event Ids --> Lägg till id här.
       let profileId = profile[0].id;
 
       let updatedIds = myEventIds.filter((ids) => ids != id);
       profile[0].myEvents = updatedIds;
       console.log(profile[0]);
-      await dbService.updateProfile(profile[0], profileId);
+      //await dbService.updateProfile(profile[0], profileId);
+      await firestoreDB.updateProfile(profile[0], profileId);
 
       // Hämta och lämna eventet i event databasen
       if (profile[0].gender === "Male") {
-        let event = await dbService.getEvent(id);
+        //let event = await dbService.getEvent(id);
+        let event = await firestoreDB.getEvent(id);
         let eventUsers = event.eventUsersMale;
         let updatedEventUsers = eventUsers.filter((ids) => ids != user.id);
         event.eventUsersMale = updatedEventUsers;
@@ -54,10 +58,12 @@ export default {
           (ids) => ids != user.id
         );
         event.activeUsersMale = updatedActiverUsers;
-        await dbService.updateEvent(event, id);
+        await firestoreDB.updateEvent(event, id);
+        //await dbService.updateEvent(event, id);
       } else {
         // Female
-        let event = await dbService.getEvent(id);
+       // let event = await dbService.getEvent(id);
+        let event = await firestoreDB.getEvent(id);
         let eventUsers = event.eventUsersFemale;
         let updatedEventUsers = eventUsers.filter((ids) => ids != user.id);
         event.eventUsersFemale = updatedEventUsers;
@@ -65,7 +71,8 @@ export default {
           (ids) => ids != user.id
         );
         event.activeUsersFemale = updatedActiverUsers;
-        await dbService.updateEvent(event, id);
+        //await dbService.updateEvent(event, id);
+        await firestoreDB.updateEvent(event, id);
       }
       //
       let updatedMyEvents = this.myEvents.filter((ids) => ids.id != id);
@@ -75,16 +82,19 @@ export default {
       if (!currentEvent.hasStarted) return;
       let id = currentEvent.id;
 
-      let event = await dbService.getEvent(id);
+      //let event = await dbService.getEvent(id);
+      let event = await firestoreDB.getEvent(id);
       let user = JSON.parse(localStorage.getItem("user")).user;
-      let profile = await dbService.getProfile(user.id);
+      //let profile = await dbService.getProfile(user.id);
+      let profile = await firestoreDB.getProfile(user.id);
 
       if (profile[0].gender === "Male") {
         let updatedUsers = event.activeUsersMale;
         if (!updatedUsers.includes(user.id)) {
           updatedUsers.push(user.id);
           event.activeUsersMale = updatedUsers;
-          await dbService.updateEvent(event, id);
+          //await dbService.updateEvent(event, id);
+          await firestoreDB.updateEvent(event, id);
 
           //Uppdater en bool (Ändrar knappen)
         }
@@ -93,7 +103,9 @@ export default {
         if (!updatedUsers.includes(user.id)) {
           updatedUsers.push(user.id);
           event.activeUsersFemale = updatedUsers;
-          await dbService.updateEvent(event, id);
+          //await dbService.updateEvent(event, id);
+          await firestoreDB.updateEvent(event, id);
+
           console.log("Fanns ej");
         }
       }
@@ -103,11 +115,13 @@ export default {
   },
   async created() {
     let user = JSON.parse(localStorage.getItem("user")).user;
-    let profile = await dbService.getProfile(user.id);
+    //let profile = await dbService.getProfile(user.id);
+    let profile = await firestoreDB.getProfile(user.id);
     let eventIds = profile[0].myEvents;
 
     for (var currentEvent of eventIds) {
-      let event = await dbService.getEvent(currentEvent);
+      //let event = await dbService.getEvent(currentEvent);
+      let event = await firestoreDB.getEvent(currentEvent);
       let eventHasStarted = event.eventHasStarted;
       let eventName = event.eventName;
       let eventLocation = event.eventLocation;
