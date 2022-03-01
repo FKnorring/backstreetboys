@@ -49,6 +49,7 @@ export default {
       eventInfo: "",
       eventTime: "",
       eventHasStarted: false,
+      eventMatches: []
     };
   },
   methods: {
@@ -68,7 +69,7 @@ export default {
         eventTime: this.eventTime,
         eventLocation: this.eventLocation,
         eventInfo: this.eventInfo,
-        eventHasStarted : this.eventHasStarted
+        eventHasStarted: this.eventHasStarted,
       };
       this.$emit("add-event", newEvent);
       this.eventUsersMale = [];

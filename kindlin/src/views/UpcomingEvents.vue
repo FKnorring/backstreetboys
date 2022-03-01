@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <h1>Upcoming Events</h1>
     <div v-for="event in myEvents" :key="event" class="events">
       <h2>{{ event.name }}</h2>
@@ -29,7 +29,7 @@ export default {
       let eventAttendersMale = event.eventUsersMale;
       let eventAttendersFemale = event.eventUsersFemale;
 
-      if(profile[0].gender === "Male" && eventAttendersMale.length <= 10){
+      if (profile[0].gender === "Male" && eventAttendersMale.length <= 10) {
         let myEventIds = profile[0].myEvents; //My Event Ids --> Lägg till id här.
         let profileId = profile[0].id;
         myEventIds.push(id);
@@ -44,8 +44,10 @@ export default {
 
         let updatedEvents = this.myEvents.filter((ids) => ids.id != id);
         this.myEvents = updatedEvents;
-
-      } else if(profile[0].gender === "Female" && eventAttendersFemale.length <= 10){
+      } else if (
+        profile[0].gender === "Female" &&
+        eventAttendersFemale.length <= 10
+      ) {
         let myEventIds = profile[0].myEvents; //My Event Ids --> Lägg till id här.
         let profileId = profile[0].id;
         myEventIds.push(id);
@@ -60,7 +62,6 @@ export default {
 
         let updatedEvents = this.myEvents.filter((ids) => ids.id != id);
         this.myEvents = updatedEvents;
-        
       } else {
         console.log("Full array");
       }
@@ -75,7 +76,10 @@ export default {
     for (var currentEvent of events) {
       let currentEventID = currentEvent.id;
 
-      if (!myEventIds.includes(currentEventID) && currentEvent.eventHasStarted === false) {
+      if (
+        !myEventIds.includes(currentEventID) &&
+        currentEvent.eventHasStarted === false
+      ) {
         let eventName = currentEvent.eventName;
         let eventLocation = currentEvent.eventLocation;
         let eventTime = currentEvent.eventTime;
@@ -101,5 +105,9 @@ export default {
 }
 .sigUp {
   position: left;
+}
+
+.page {
+  padding-bottom: 50px;
 }
 </style>

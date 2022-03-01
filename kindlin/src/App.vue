@@ -8,7 +8,10 @@
     <router-link to="/organizer">Organizer</router-link> |
     <router-link to="/completeprofile">Complete Profile</router-link> |
     <router-link to="/previousmatches">Previous Matches</router-link> |
-    <router-link to="/eventstage">Event Stage</router-link> 
+    <router-link to="/eventstage">Event Stage</router-link> |
+    <router-link to="/liveevent">Live Event</router-link>
+    <router-link to="/liveevent2">Live Event 2</router-link>
+    <router-link to="/EventStage2">Event stage 2</router-link>
   </div>
   <div class="icon-container">
     <fa @click="home()" class="icon" icon="house" />

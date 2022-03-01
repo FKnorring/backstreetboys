@@ -54,6 +54,131 @@
       "email": "match@girl",
       "password": "$2a$10$ReX3BL7LMmVNBTKhXDspsOvJEYziAPkRTR8zoN8ys8/lJrZnG9IKW",
       "id": 12
+    },
+    {
+      "email": "balle@balle",
+      "password": "$2a$10$ZGaNk4Am9oCV3oyEI1U6D.C78v45QEVZXL8qKMLPzBQ92JVtU.ClO",
+      "id": 13
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "$2a$10$EWK0.vBBTI4KyprSkzK7MeXnrJG1FPLz9AS5hvuOpr06msNJZ6OJ.",
+      "id": 14
+    },
+    {
+      "email": "a@gmail.com",
+      "password": "$2a$10$Fp7wBOGy8UBn0QuvyqTxq.fRwqdPtOghCORNRuE/ZMh1F19DQahcK",
+      "id": 15
+    },
+    {
+      "email": "2@gmail.com",
+      "password": "$2a$10$xj/AzsigktY0q8bHt/YD3.Av05po7.j6rht0gaIj4yQlxDUDOiRs2",
+      "id": 16
+    },
+    {
+      "email": "b@gmail.com",
+      "password": "$2a$10$47rZWqfGFYdVrnGDuExxUuURBlNdMpjohG1Yf/mDftezmlZn4wHN.",
+      "id": 17
+    },
+    {
+      "email": "3@gmail.com",
+      "password": "$2a$10$96XDleZBKqEvf.GxA8CW1..Bx3JOr1rxmBM5g.ZM4ZvCg/GWlVqgq",
+      "id": 18
+    },
+    {
+      "email": "c@gmail.com",
+      "password": "$2a$10$fJaWdVnJKSyLqsozUdbZY.rhsWdUeWcC.nKmM6hxSe.InmCf9yi1G",
+      "id": 19
+    },
+    {
+      "email": "4@gmail.com",
+      "password": "$2a$10$wJ6oU33md2XQd1xp/trtHunxbXAJ551ok05c/qmc5LJOtVYS9oSAe",
+      "id": 20
+    },
+    {
+      "email": "d@gmail.com",
+      "password": "$2a$10$mXBZnww39uG5EreGKYbKneX0AcEmONrDRGqTcSIapwEEtLX7c5br6",
+      "id": 21
+    },
+    {
+      "email": "5@gmail.com",
+      "password": "$2a$10$a5KJc4p8BlnUP3kR6LAqbe8kB.hcPuJIs70d0Z9HHB.qrcpGTUlH2",
+      "id": 22
+    },
+    {
+      "email": "e@gmail.com",
+      "password": "$2a$10$FCYqEYfqkTzE1/yfYA4SuOA6mDvNaslHfSwNA5OUYgj/a4P4jD5da",
+      "id": 23
+    },
+    {
+      "email": "6@gmail.com",
+      "password": "$2a$10$mBr./6yWMdWDZY6zNapAEuxdfEUCa8blACDTKX5wjIgvp8FBHkv6i",
+      "id": 24
+    },
+    {
+      "email": "f@gmail.com",
+      "password": "$2a$10$spuiY2kTTZ9jznTaNUBfRuJW5Jrb79YDDNWMVgeI64YD9Imy2rTaq",
+      "id": 25
+    },
+    {
+      "email": "7@gmail.com",
+      "password": "$2a$10$xaHObzJ2tBbPk9h3nLOyle2IxfNbkomd3PTwQ9ancoIqHaCjiZn0e",
+      "id": 26
+    },
+    {
+      "email": "g@gmail.com",
+      "password": "$2a$10$xYGx1ivxpCQVbkYdlrBK/OhW/YumYDvnIRTo4bOvAeiNqu6YTD7wC",
+      "id": 27
+    },
+    {
+      "email": "8@gmail.com",
+      "password": "$2a$10$MJHwA9IUhFv1lbCYCyzed.QzohFaRqI0UGshA8rgKAQNPwSDIIl2S",
+      "id": 28
+    },
+    {
+      "email": "h@gmail.com",
+      "password": "$2a$10$wA/zaZK4/KmPh13KNDQVjON1IxodN/6WKkx6oQeq8lIVXAX2HB2kK",
+      "id": 29
+    },
+    {
+      "email": "9@gmail.com",
+      "password": "$2a$10$yNuhGlXkAAy2///m1rEMi.HmFDXp0/dG5JMgIVI0loAcG9mSod1jC",
+      "id": 30
+    },
+    {
+      "email": "dillstrom.j@gmail.com",
+      "password": "$2a$10$qZx43WoPJTZUdI6jlvDCl.42UljMDY4azs4YahYtMZ2og7DCcuoWm",
+      "id": 31
+    },
+    {
+      "email": "dill@sill",
+      "password": "$2a$10$fw.PaBGqJPA1n32g9.4Wl.5d/kJgQo7KmoXaltolohbNuMLJU/r2S",
+      "id": 32
+    },
+    {
+      "email": "match@match",
+      "password": "$2a$10$V442/bpoXlPfdF7lE9iLdeQikBq7gGhTSqDqqRR4PuMymMNA6cbsu",
+      "id": 33
+    },
+    {
+      "email": "lasse@laser",
+      "password": "$2a$10$4etukDNdxW55tf5gnjYT7ukkOIofxmAmGOpf1G99Odsv8I7919ZGS",
+      "id": 34
+    },
+    {
+      "email": "10@gmail.com",
+      "password": "$2a$10$WmWnEpcLx0JmElm9l/TDkOY3KK6FNx9bu4IOojZFHXFDmmafzBljS",
+      "id": 35
+    },
+    {
+      "email": "lexie@cool.se",
+      "password": "$2a$10$XOegAmrF7akP3BHCzyvUWupLMhf2PWO4ZlCMKZzKeil9X8ROYbrEy",
+      "id": 36
+    },
+    {
+      "email": "test@person",
+      "password": "$2a$10$Ed0xvpOBH8sl/h2P7T/N8ubiA6W/dzeKkPX.LdMtHK2YScaInB1O2",
+      "id": 37
     }
   ],
   "profiles": [
@@ -94,10 +219,45 @@
       "userId": 5,
       "id": 5,
       "myEvents": [
-        9,
-        10
+        12
       ],
-      "weights": null
+      "interests": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "currentMatches": [
+        17
+      ]
     },
     {
       "name": "AAA",
@@ -119,7 +279,40 @@
       "userId": 5,
       "id": 7,
       "myEvents": [],
-      "weights": null
+      "interests": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
     },
     {
       "name": "Jacob Dillström",
@@ -136,7 +329,7 @@
       "name": "Sara",
       "gender": "Female",
       "phonenumber": "030",
-      "age": "12",
+      "age": 12,
       "occupation": "Hej",
       "interests": [
         false,
@@ -251,23 +444,27 @@
       "id": 13
     },
     {
-      "name": "erik",
-      "gender": "Male",
-      "phonenumber": "0760503839",
-      "age": 18,
-      "occupation": "kalle",
+      "name": "Maja",
+      "gender": "Female",
+      "phonenumber": "112",
+      "age": 22,
+      "occupation": "Student",
+      "previousMatches": [
+        12,
+        20
+      ],
       "interests": [
         true,
         true,
+        false,
+        false,
+        false,
         true,
         true,
+        false,
+        false,
+        false,
         true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
         false,
         false,
         false,
@@ -276,27 +473,27 @@
       "weights": [
         1,
         1,
+        0,
+        0,
+        0,
         1,
         1,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         0,
         0,
         0,
         0
       ],
-      "bio": "kshfei",
-      "myEvents": [
-        9,
-        10
-      ],
-      "userId": 10,
-      "id": 15
+      "bio": "Hej",
+      "myEvents": [],
+      "userId": 15,
+      "id": 15,
+      "currentMatches": [
+        14
+      ]
     },
     {
       "name": "En tjej",
@@ -339,16 +536,760 @@
         0
       ],
       "bio": "Jag ä\nr en tjej",
-      "myEvents": [],
+      "myEvents": [
+        11
+      ],
       "userId": 11,
       "id": 16
     },
     {
-      "name": "Match Girl",
+      "name": "Sara",
       "gender": "Female",
-      "phonenumber": "23",
-      "age": 24,
-      "occupation": "qwerty",
+      "phonenumber": "114",
+      "age": 22,
+      "occupation": "Student",
+      "interests": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bio": "Hej",
+      "myEvents": [],
+      "userId": 17,
+      "id": 17,
+      "currentMatches": [
+        5
+      ]
+    },
+    {
+      "name": "balle",
+      "gender": "Female",
+      "phonenumber": "69696969696",
+      "age": 18,
+      "occupation": "balle",
+      "interests": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bio": "balle",
+      "myEvents": [
+        11,
+        12
+      ],
+      "userId": 13,
+      "id": 18
+    },
+    {
+      "name": "Herbert",
+      "gender": "Male",
+      "phonenumber": "1",
+      "age": 98,
+      "occupation": "Gammal",
+      "interests": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bio": "Ja e gammal",
+      "myEvents": [],
+      "userId": 14,
+      "id": 19
+    },
+    {
+      "name": "Maja",
+      "gender": "Female",
+      "phonenumber": "112",
+      "age": 22,
+      "occupation": "Student",
+      "previousMatches": [
+        12,
+        20
+      ],
+      "interests": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "Hej",
+      "myEvents": [],
+      "userId": 15,
+      "id": 20
+    },
+    {
+      "name": "Jamaina",
+      "gender": "Female",
+      "phonenumber": "8329567",
+      "age": 34,
+      "occupation": "Hejsan",
+      "interests": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bio": "yoyoyo",
+      "myEvents": [],
+      "userId": 21,
+      "id": 21,
+      "currentMatches": [
+        30
+      ]
+    },
+    {
+      "name": "Sara",
+      "gender": "Female",
+      "phonenumber": "114",
+      "age": 22,
+      "occupation": "Student",
+      "interests": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bio": "Hej",
+      "myEvents": [],
+      "userId": 17,
+      "id": 22
+    },
+    {
+      "name": "Yolena",
+      "gender": "Female",
+      "phonenumber": "203959",
+      "age": 89,
+      "occupation": "majs",
+      "interests": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "weights": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bio": "Kool",
+      "myEvents": [],
+      "userId": 23,
+      "id": 23,
+      "currentMatches": [
+        26
+      ]
+    },
+    {
+      "name": "Love",
+      "gender": "Male",
+      "phonenumber": "112",
+      "age": 23,
+      "occupation": "Inte poliz",
+      "interests": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "Inte poliz ja lovar",
+      "myEvents": [],
+      "userId": 24,
+      "id": 24,
+      "currentMatches": [
+        29
+      ]
+    },
+    {
+      "name": "Janne",
+      "gender": "Male",
+      "phonenumber": "230",
+      "age": 29,
+      "occupation": "Meckare",
+      "interests": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "weights": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "bio": "shuuu",
+      "myEvents": [],
+      "userId": 20,
+      "id": 25
+    },
+    {
+      "name": "Jamaina",
+      "gender": "Female",
+      "phonenumber": "8329567",
+      "age": 34,
+      "occupation": "Hejsan",
+      "interests": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bio": "yoyoyo",
+      "myEvents": [],
+      "userId": 21,
+      "id": 26
+    },
+    {
+      "name": "Ulrik",
+      "gender": "Male",
+      "phonenumber": "112",
+      "age": 18,
+      "occupation": "Poliz",
+      "interests": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "bio": "Du kör för fort",
+      "myEvents": [],
+      "userId": 22,
+      "id": 27
+    },
+    {
+      "name": "Yolena",
+      "gender": "Female",
+      "phonenumber": "203959",
+      "age": 89,
+      "occupation": "majs",
+      "interests": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "weights": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bio": "Kool",
+      "myEvents": [],
+      "userId": 23,
+      "id": 28
+    },
+    {
+      "name": "Love",
+      "gender": "Male",
+      "phonenumber": "112",
+      "age": 23,
+      "occupation": "Inte poliz",
+      "interests": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "Inte poliz ja lovar",
+      "myEvents": [],
+      "userId": 24,
+      "id": 29
+    },
+    {
+      "name": "Martin",
+      "gender": "Male",
+      "phonenumber": "19292",
+      "age": 20,
+      "occupation": "Arbetslös",
+      "interests": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "E fett arbetslös",
+      "myEvents": [],
+      "userId": 30,
+      "id": 30,
+      "currentMatches": [
+        21
+      ]
+    },
+    {
+      "name": "Erland",
+      "gender": "Male",
+      "phonenumber": "1",
+      "age": 104,
+      "occupation": "Panjis",
+      "interests": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bio": "Äldre än dig min broder",
+      "myEvents": [],
+      "userId": 26,
+      "id": 31
+    },
+    {
+      "name": "greta",
+      "gender": "Female",
+      "phonenumber": "9385",
+      "age": 23,
+      "occupation": "JOO",
+      "interests": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "bio": "Massa skit",
+      "myEvents": [],
+      "userId": 27,
+      "id": 32
+    },
+    {
+      "name": "Haskell Curry",
+      "gender": "Male",
+      "phonenumber": "404",
+      "age": 44,
+      "occupation": "Icke funktionell programmering",
       "interests": [
         false,
         true,
@@ -359,11 +1300,11 @@
         false,
         true,
         true,
-        false,
-        false,
-        false,
-        false,
         true,
+        false,
+        false,
+        false,
+        false,
         true
       ],
       "weights": [
@@ -376,30 +1317,405 @@
         0,
         1,
         1,
+        1,
         0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bio": "Jag gillar inte dig",
+      "myEvents": [],
+      "userId": 28,
+      "id": 33
+    },
+    {
+      "name": "Lajkis",
+      "gender": "Female",
+      "phonenumber": "290823",
+      "age": 35,
+      "occupation": "Majs",
+      "interests": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "weights": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "bio": "Kolasås",
+      "myEvents": [],
+      "userId": 29,
+      "id": 34
+    },
+    {
+      "name": "Martin",
+      "gender": "Male",
+      "phonenumber": "19292",
+      "age": 20,
+      "occupation": "Arbetslös",
+      "interests": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "E fett arbetslös",
+      "myEvents": [],
+      "userId": 30,
+      "id": 35
+    },
+    {
+      "name": "Jacob",
+      "gender": "Male",
+      "phonenumber": "0736990412",
+      "age": 20,
+      "occupation": "Städare",
+      "interests": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "Hej! Jag är en fisk som gillar att vara på land.",
+      "myEvents": [],
+      "userId": 31,
+      "id": 36,
+      "previousMatches": [
+        30,
+        29,
+        28
+      ]
+    },
+    {
+      "name": "Dill",
+      "gender": "Male",
+      "phonenumber": "123123",
+      "age": 21,
+      "occupation": "321321",
+      "interests": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "hejhej",
+      "myEvents": [],
+      "previousMatches": [
+        35,
+        36,
+        30
+      ],
+      "userId": 32,
+      "id": 37
+    },
+    {
+      "name": "match",
+      "gender": "Male",
+      "phonenumber": "33333",
+      "age": 10,
+      "occupation": "22222",
+      "interests": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "weights": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
         0,
         0,
         0,
         1,
         1
       ],
-      "bio": "asdf",
-      "myEvents": [
-        12
+      "bio": "lol",
+      "myEvents": [],
+      "previousMatches": [],
+      "userId": 33,
+      "id": 38
+    },
+    {
+      "name": "Ellen Karlsson",
+      "gender": "Female",
+      "phonenumber": "070464006",
+      "age": 23,
+      "occupation": "Läkare",
+      "interests": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false
       ],
-      "userId": 12,
-      "id": 17
+      "weights": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "bio": "Tränar är glad hej,",
+      "myEvents": [
+        11,
+        13
+      ],
+      "previousMatches": [],
+      "userId": 34,
+      "id": 39
+    },
+    {
+      "name": "Herman Hermansson",
+      "gender": "Male",
+      "phonenumber": "112",
+      "age": 32,
+      "occupation": "Skier",
+      "interests": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "weights": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bio": "Lorem ipsum",
+      "myEvents": [],
+      "previousMatches": [],
+      "userId": 35,
+      "id": 40
+    },
+    {
+      "name": "lexie",
+      "gender": "Female",
+      "phonenumber": "9489232",
+      "age": 21,
+      "occupation": "infoansvarig",
+      "interests": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "weights": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bio": "jag letar efter ngn som är filip",
+      "myEvents": [
+        13
+      ],
+      "previousMatches": [],
+      "userId": 36,
+      "id": 41
     }
   ],
   "events": [
     {
       "eventUsersMale": [
-        10,
-        5
+        10
       ],
       "activeUsersMale": [
-        10,
-        5
+        10
       ],
       "eventUsersFemale": [],
       "activeUsersFemale": [],
@@ -411,12 +1727,10 @@
     },
     {
       "eventUsersMale": [
-        10,
-        5
+        10
       ],
       "activeUsersMale": [
-        10,
-        5
+        10
       ],
       "eventUsersFemale": [],
       "activeUsersFemale": [],
@@ -424,12 +1738,18 @@
       "eventTime": "2000-02-23T20:03",
       "eventLocation": "test",
       "eventInfo": "Hej hej",
-      "id": 10
+      "id": 10,
+      "eventHasStarted": true
     },
     {
       "eventUsersMale": [],
       "activeUsersMale": [],
-      "eventUsersFemale": [],
+      "eventUsersFemale": [
+        13,
+        12,
+        11,
+        34
+      ],
       "activeUsersFemale": [],
       "eventName": "Test",
       "eventTime": "2000-02-07T04:20",
@@ -439,51 +1759,61 @@
       "id": 11
     },
     {
-      "eventUsersMale": [],
-      "activeUsersMale": [],
+      "eventUsersMale": [
+        5,
+        30,
+        28,
+        26,
+        24,
+        22,
+        20,
+        18,
+        16,
+        14
+      ],
+      "activeUsersMale": [
+        5
+      ],
       "eventUsersFemale": [
-        12
+        13,
+        12,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29
       ],
       "activeUsersFemale": [],
       "eventName": "Love at Nya Ångan",
       "eventTime": "2022-02-25T16:00",
       "eventLocation": "Nya ångströmslaboratoriet",
       "eventInfo": "This is where you will find the love of your life! <3",
-      "eventHasStarted": false,
+      "eventHasStarted": true,
       "id": 12
-    }
-  ],
-  "previousmatches": [
-    {
-      "userId": 6,
-      "id": 6,
-      "matches": [
-        7,
-        4,
-        6
-      ]
     },
     {
-      "userId": 5,
-      "id": 7,
-      "matches": [
-        4,
-        6
-      ]
-    },
-    {
-      "userId": 7,
-      "matches": [
-        4,
-        6,
-        5
-      ]
+      "eventUsersMale": [],
+      "activeUsersMale": [],
+      "eventUsersFemale": [
+        34,
+        36
+      ],
+      "activeUsersFemale": [],
+      "eventName": "Dans",
+      "eventTime": "2000-02-02T12:30",
+      "eventLocation": "mästraen",
+      "eventInfo": "Dansaloss",
+      "eventHasStarted": false,
+      "id": 13
     }
   ],
   "stage": {
-    "event": 10,
-    "started": false,
-    "stage": 3,
+    "event": 12,
+    "started": "false",
+    "stage": 1,
     "state": "waiting"
   }
 }

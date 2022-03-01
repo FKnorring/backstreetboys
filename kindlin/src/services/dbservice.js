@@ -22,6 +22,8 @@ export const dbService = {
 
 const api = "http://localhost:3000/";
 
+
+
 function getEvents() {
   return dbRequest("GET", null, "events");
 }
@@ -95,7 +97,7 @@ function getProfile(id) {
 }
 
 function getMatches(id) {
-  return dbRequest("GET", null, "previousmatches?userId=" + id);
+  return dbRequest("GET", null, "previousMatches?userId=" + id);
 }
 
 function getEvent(id) {

@@ -18,10 +18,13 @@ export default {
   },
   async created() {
     let user = JSON.parse(localStorage.getItem("user")).user;
-    let profile = await dbService.getMatches(user.id);
-    let matchIds = profile[0].matches;
-
-    for (var match of matchIds) {
+    let profile = (await dbService.getProfile(user.id))[0];
+   // let matchIds = profile[0].matches;
+    let previousMatches = profile.previousMatches;
+    
+    for(let i = 0; i < previousMatches.length; i++){
+      let match = previousMatches[i];
+      
       let matchedProfile = await dbService.getProfile(match);
       let matchedName = matchedProfile[0].name;
       let matchedNumber = matchedProfile[0].phonenumber;

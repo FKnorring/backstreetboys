@@ -1,6 +1,4 @@
 <template>
-  <h1>{{ stage }}</h1>
-  <button @click="incrStage()"></button>
   <div v-show="page === 'wait'" class="waiting-screen">
     <fa @click="page = 'map'" class="map" icon="map" />
     <fa @click="page = 'match'" class="user" icon="user" />
@@ -12,7 +10,7 @@
   <div v-show="page === 'match'" class="match-screen">
     <fa class="icon" @click="page = 'wait'" icon="caret-left" />
     <h1>Match</h1>
-    {{ profile }}
+    <Profile :userId="match" />
   </div>
   <div v-show="page === 'review'" class="review-screen">
     <h1>Review</h1>
@@ -30,6 +28,7 @@
 
 <script>
 import { dbService } from "../services/dbservice";
+import Profile from "../components/profile/Profile.vue";
 
 export default {
   data() {
@@ -40,7 +39,6 @@ export default {
       value1: 4,
       value2: 4,
       value3: 4,
-      match: {},
       profile: {},
     };
   },
@@ -56,7 +54,6 @@ export default {
     },
   },
   async created() {
-    this.match = (await dbService.getProfile(8))[0];
     let user = JSON.parse(localStorage.getItem("user")).user;
     this.profile = (await dbService.getProfile(user.id))[0];
     this.stage = await dbService.getStage();
@@ -96,6 +93,9 @@ export default {
         return null;
       }
     },
+    currentMatch: function () {
+      return this.profile.currentMatches[this.stage.stage];
+    },
   },
   watch: {
     stage: async function () {
@@ -103,6 +103,7 @@ export default {
       return stage;
     },
   },
+  components: { Profile },
 };
 </script>
 

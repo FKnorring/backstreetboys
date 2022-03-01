@@ -31,36 +31,30 @@
 </template>
 
 <script>
-import { dbService } from "../services/dbservice";
-import Interests from "../components/profile/Interests.vue";
+import { dbService } from "../../services/dbservice";
+import Interests from "./Interests.vue";
 
 export default {
+  name: "Profile",
+  props: {
+    userId: Number,
+  },
   data() {
     return {
       user: {},
       id: 1,
-      path: "http://localhost:3000/users/",
       username: "USERNAME",
       gender: "GENDER",
       age: "AGE",
-      email: "EMAIL@email.com",
       occupation: "OCCUPATION",
       bio: "",
       previousMatches: "",
     };
   },
-  methods: {
-    removeAcc() {
-      dbService.removeAcc();
-      this.$router.push("/login");
-    },
-  },
   async created() {
-    this.user = JSON.parse(localStorage.getItem("user")).user;
-    let profile = await dbService.getProfile(this.user.id);
+    let profile = await dbService.getProfile(this.userId);
     this.username = profile[0].name;
     this.gender = profile[0].gender;
-    this.email = this.user.email;
     this.occupation = profile[0].occupation;
     this.age = profile[0].age;
     this.bio = profile[0].bio;
@@ -72,7 +66,7 @@ export default {
         "https://randomuser.me/api/portraits/" +
         (this.gender == "Male" ? "men" : "women") +
         "/" +
-        this.user.id +
+        this.userId +
         ".jpg"
       );
     },
