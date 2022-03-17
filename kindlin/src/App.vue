@@ -1,6 +1,6 @@
 <template>
   <h1 v-if="username">{{ username }}</h1>
-  <div id="nav">
+  <div v-if="dev" id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/sign-up">SignUp</router-link> |
     <router-link to="/login">Login</router-link> |
@@ -10,25 +10,21 @@
     <router-link to="/previousmatches">Previous Matches</router-link> |
     <router-link to="/eventstage">Event Stage</router-link> |
     <router-link to="/liveevent">Live Event</router-link>
-    <router-link to="/liveevent2">Live Event 2</router-link>
-    <router-link to="/EventStage2">Event stage 2</router-link>
   </div>
-  <div class="icon-container">
-    <fa @click="home()" class="icon" icon="house" />
-    <fa @click="search()" class="icon" icon="magnifying-glass" />
+  <div v-if="user" class="icon-container">
+    <fa @click="home()" class="icon" icon="house"></fa>
+    <fa @click="search()" class="icon" icon="calendar" />
     <fa @click="previousMatch()" class="icon" icon="heart" />
     <fa @click="profile()" class="icon" icon="user" />
   </div>
   <router-view />
 </template>
 <script>
-import { dbService } from "./services/dbservice";
-import { firestoreDB } from "./services/db";
-
 export default {
   data() {
     return {
       username: "",
+      dev: true,
     };
   },
   methods: {
@@ -45,29 +41,26 @@ export default {
     profile() {
       this.$router.push("/profile");
     },
-
-    async getUser(user) {
-      if (user) {
-        //let profile = await dbService.getProfile(user.id);
-        let profile = await firestoreDB.getProfile(user.id);
-        return profile.name;
-      }
+  },
+  computed: {
+    loggedIn: function () {
+      return localStorage.getItem("user");
     },
-    async getUsername() {
-      let loggedIn = JSON.parse(localStorage.getItem("user"));
-      if (loggedIn) {
-        return await this.getUser(loggedIn.user);
+    user: function () {
+      if (
+        [
+          "Home",
+          "Profile",
+          "UpcomingEvents",
+          "PreviousMatches",
+          "EventStage",
+          "MyEvents",
+        ].includes(this.$route.name)
+      ) {
+        return true;
       } else {
-        return "Not logged in";
+        return false;
       }
-    },
-  },
-  async created() {
-    this.username = await this.getUsername();
-  },
-  watch: {
-    username: async function () {
-      return await this.getUsername();
     },
   },
 };
@@ -100,25 +93,42 @@ export default {
 .icon-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   position: fixed;
-  background: rgb(255, 254, 254);
+  background: #eee;
   bottom: 0;
   height: 65px;
   width: 100%;
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.15);
+  z-index: 100;
 }
 
 .icon {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  color: black;
-  width: 2rem;
-  height: 2rem;
+  color: #666;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0.25rem;
   cursor: pointer;
 }
 
 .icon:hover {
-  background: #bbbbbb;
+  background: none;
+}
+
+body {
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #nav {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
 }
 </style>

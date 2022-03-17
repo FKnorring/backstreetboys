@@ -9,7 +9,7 @@ import PreviousMatches from "../views/PreviousMatches.vue";
 import UpcomingEvents from "../views/UpcomingEvents.vue";
 import EventStage from "../views/EventStage.vue";
 import LiveEvent from "../views/LiveEvent.vue";
-import LiveEvent2 from "../views/LiveEvent2.vue";
+import MyEvents from "../views/MyEvents.vue"
 
 const routes = [
   {
@@ -63,10 +63,10 @@ const routes = [
     component: LiveEvent,
   },
   {
-    path: "/LiveEvent2",
-    name: "LiveEvent2",
-    component: LiveEvent2,
-  }
+    path: "/MyEvents",
+    name: "MyEvents",
+    component: MyEvents,
+  },
 ];
 
 const router = createRouter({

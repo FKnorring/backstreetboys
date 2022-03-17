@@ -6,7 +6,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 
-
 library.add(fas);
 
 createApp(App).use(router).component("fa", FontAwesomeIcon).mount("#app");

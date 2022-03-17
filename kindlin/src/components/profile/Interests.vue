@@ -79,6 +79,9 @@ export default {
   grid-gap: 1rem;
   font-size: 2rem;
   margin: 1rem;
+  background: none;
+  box-shadow: none;
+  border: none;
 }
 
 .icon {
@@ -93,7 +96,7 @@ export default {
 }
 
 .icon:hover {
-  background: #bbbbbb;
+  background: none;;
 }
 
 .selected {

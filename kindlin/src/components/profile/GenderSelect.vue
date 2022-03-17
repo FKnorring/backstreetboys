@@ -5,14 +5,14 @@
       class="gender"
       :class="{ selected: gender === 'Male' }"
       icon="person"
-      size="8x"
+      size="6x"
     />
     <fa
       @click="selectGender('Female')"
       class="gender"
       :class="{ selected: gender === 'Female' }"
       icon="person-dress"
-      size="8x"
+      size="6x"
     />
   </div>
 </template>
@@ -40,15 +40,21 @@ export default {
 
 <style scoped>
 .icon-container {
+  display: flex;
+  align-items: center;
+  padding: -0.01vw;
+  margin-top:8vw;
+  margin-bottom: 8vw;
   position: relative;
-  width: fit-content;
-  height: fit-content;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .gender {
-  margin: 2rem;
   color: black;
 }
+
 
 .gender:hover {
   cursor: pointer;

@@ -2,76 +2,97 @@
   <div class="page">
     <div class="profile">
       <div class="header">
-        <h1>{{ username }}</h1>
+        <h1>{{ user.name }}</h1>
         <img :src="picture" alt="" />
       </div>
       <div class="content">
         <h2 class="key-val">
           Age
-          <p>{{ age }}</p>
+          <p>{{ user.age }}</p>
         </h2>
         <h2 class="key-val">
           Gender
-          <p>{{ gender }}</p>
+          <p>{{ user.gender }}</p>
         </h2>
         <h2 class="key-val">
           Occupation
-          <p>{{ occupation }}</p>
+          <p>{{ user.occupation }}</p>
         </h2>
-        <h2>Interests</h2>
-        <Interests />
-        <h3>Bio:</h3>
-        <p>{{ bio }}</p>
-        <fa icon="dog" />
+        <h2> Interests </h2>
+        <div class="interests">
+        
+          <fa
+            v-for="interest in interestList"
+            :key="interest"
+            class="icon"
+            :icon="interest"
+          />
+        </div>
+        
+        <div class="bio">
+          <h3>Bio:</h3>
+          <p>{{ user.bio }}</p>
+        </div>
       </div>
 
-      <button @click="removeAcc">Remove Account</button>
+      <!-- <button @click="removeAcc">Remove Account</button> -->
     </div>
   </div>
 </template>
 
 <script>
-import { dbService } from "../../services/dbservice";
-import Interests from "./Interests.vue";
 
 export default {
-  name: "Profile",
-  props: {
-    userId: Number,
-  },
   data() {
     return {
-      user: {},
-      id: 1,
-      username: "USERNAME",
-      gender: "GENDER",
-      age: "AGE",
-      occupation: "OCCUPATION",
-      bio: "",
-      previousMatches: "",
+      interestList: [],
+      allInterests: [
+        "heart",
+        "basketball",
+        "bicycle",
+        "bowling-ball",
+        "dumbbell",
+        "futbol",
+        "person-hiking",
+        "brain",
+        "person-running",
+        "table-tennis-paddle-ball",
+        "person-skiing",
+        "baseball",
+        "archway",
+        "volleyball",
+        "stopwatch-20",
+      ],
     };
   },
-  async created() {
-    let profile = await dbService.getProfile(this.userId);
-    this.username = profile[0].name;
-    this.gender = profile[0].gender;
-    this.occupation = profile[0].occupation;
-    this.age = profile[0].age;
-    this.bio = profile[0].bio;
-    this.previousMatches = [];
+  name: "Profile",
+  props: {
+    user: Object,
+  },
+  methods: {
+    getUserInterests() {
+      for (let x = 0; x < 15; x++) {
+        if (this.user.interests[x]) {
+          this.interestList.push(this.allInterests[x]);
+        }
+      }
+    },
   },
   computed: {
     picture: function () {
       return (
         "https://randomuser.me/api/portraits/" +
-        (this.gender == "Male" ? "men" : "women") +
+        (this.user.gender == "Male" ? "men" : "women") +
         "/" +
-        this.userId +
+        this.user.userId +
         ".jpg"
       );
     },
   },
-  components: { Interests },
+
+  created() {
+    this.getUserInterests();
+  },
 };
 </script>
 
@@ -92,7 +113,7 @@ export default {
   border-radius: 100%;
   border: solid 2px black;
   width: 90px;
-  margin: 1em;
+  margin-bottom: 1em;
 }
 
 .header::after {
@@ -105,15 +126,23 @@ export default {
 }
 
 .profile {
-  width: 25%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   text-align: left;
-  place-content: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.5);
+  height: 630px;
+  overflow-y: auto;
 }
 
 .content {
   margin: 1em;
+}
+
+.interests {
+  display: flex;
 }
 
 .page {
@@ -130,5 +159,9 @@ export default {
   font-weight: 100;
   font-size: 0.75em;
   margin: 0 2em;
+}
+
+.bio {
+  height: 100px;
 }
 </style>

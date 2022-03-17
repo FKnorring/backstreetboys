@@ -5,15 +5,13 @@
 </template>
 
 <script>
-
 export default {
   name: "Header",
   props: {
     title: String,
     showAddEvent: Boolean,
   },
-  components: {
-  },
+  components: {},
   computed: {
     homePage() {
       if (this.$route.path === "/") {
@@ -23,8 +21,7 @@ export default {
       }
     },
   },
-  created() {
-  },
+  created() {},
 };
 </script>
 

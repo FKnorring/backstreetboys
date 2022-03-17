@@ -6,10 +6,12 @@ import {
   getDocs,
   query,
   getDoc,
+  setDoc,
   deleteDoc,
-  addDoc,
   updateDoc,
   onSnapshot,
+  orderBy,
+  limit,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -63,7 +65,7 @@ function getEventUsers(id) {
 }
 
 async function addEvent(event) {
-  return await addDoc(collection(db, "events"), event);
+  return await setDoc(events(event.id), event);
 }
 
 async function updateEvent(id, event) {
@@ -71,7 +73,7 @@ async function updateEvent(id, event) {
 }
 
 async function addProfile(profile) {
-  return await addDoc(collection(db, "profiles"), profile);
+  return await setDoc(profiles(profile.userId), profile);
 }
 
 async function getProfile(id) {
@@ -94,10 +96,28 @@ async function setStage(stage) {
   return await updateDoc(doc(db, "stage/stage"), stage);
 }
 
-function stageListener() {
+function stageListener(ref) {
   return onSnapshot(doc(db, "stage/stage"), async (doc) => {
-    doc.data()
+    ref.value = doc.data();
   });
+}
+
+function eventListener(ref, id) {
+  return onSnapshot(doc(db, "events/" + id), async (doc) => {
+    ref.value = doc.data();
+  });
+}
+
+async function getNextEventId() {
+  const querySnapshot = await getDocs(
+    query(collection(db, "events"), orderBy("id", "desc"), limit(1))
+  );
+  let id = -1;
+  querySnapshot.forEach((snap) => {
+    id = snap.data().id;
+  });
+  console.log(id);
+  return id + 1;
 }
 
 export const firestoreDB = {
@@ -114,5 +134,8 @@ export const firestoreDB = {
   removeEvent,
   removeProfile,
   stageListener,
+  eventListener,
+  getNextEventId,
   db,
+  //updateMatches,
 };

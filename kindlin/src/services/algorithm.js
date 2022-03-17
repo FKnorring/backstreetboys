@@ -31,8 +31,11 @@ function getMatches(users) {
   let matches = [];
   while (users.length > 0) {
     let user = users[0];
+    console.log(user);
     let possibleMatches = filterGender(users, user.gender);
+    console.log(users, possibleMatches);
     let match = bestMatch(user, possibleMatches);
+    
     users = filterIds(users, user.userId, match.userId);
     matches.push({ matcher: user, matchee: match });
   }

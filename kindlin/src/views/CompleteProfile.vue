@@ -1,6 +1,7 @@
 <template>
-  <div class="page">
-    <div class="stage">
+
+  <div class="page-complete">
+    <div class="stage-complete">
       <div class="selector">
         <button @click="stage = 1" :class="{ green: submitted[0] }">1</button>
         <p>Complete Profile</p>
@@ -18,7 +19,7 @@
         <p>Complete Bio</p>
       </div>
     </div>
-    <div class="container">
+    <div class="container-complete">
       <div class="form">
         <div v-show="stage == 1">
           <h1>Complete Profile</h1>
@@ -54,26 +55,27 @@
           <h1>Finish your bio</h1>
           <textarea
             placeholder="Tell us about yourself!"
-            rows="4"
-            cols="50"
+            rows="12"
+            cols="40"
             max-length="200"
             v-model="bio"
           />
-          <button @click="prev()" class="next">Previous</button>
-          <button @click="submit()" class="next">Submit</button>
+          <div class="prev-sub">
+            <button @click="prev()" class="next">Previous</button>
+            <button @click="submit()" class="next">Submit</button>
+          </div>
           <p>Max 200 characters.</p>
         </div>
       </div>
     </div>
     <p>You can always edit your profile later</p>
-    <div class="navigators">
+    <!--<div class="navigators">
       <fa class="icon" @click="prev" icon="caret-left" />
       <fa class="icon" @click="next" icon="caret-right" />
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
-import { dbService } from "../services/dbservice";
 import { firestoreDB } from "../services/db";
 import Interests from "../components/profile/Interests.vue";
 import GenderSelect from "../components/profile/GenderSelect.vue";
@@ -92,6 +94,7 @@ export default {
       submitted: [false, false, false, false],
       userId: -1,
       previousMatches: [],
+      eventMatches: [],
     };
   },
   methods: {
@@ -99,7 +102,7 @@ export default {
       if (this.selectedInterests == 5) {
         //await dbService.makeProfile(this.getProfileData());
         await firestoreDB.addProfile(this.getProfileData());
-        this.$router.push("/profile");
+        this.$router.push("/");
       } else {
         alert("Select 5 interests");
       }
@@ -126,6 +129,7 @@ export default {
       profile.bio = this.bio;
       profile.myEvents = [];
       profile.previousMatches = [];
+      profile.eventMatches = [];
       profile.userId = this.userId;
       console.log(profile);
       return profile;
@@ -179,6 +183,10 @@ export default {
 };
 </script>
 <style scoped>
+p{
+  font-weight: 600;
+}
+
 h1 {
   margin: 0.25em 0;
 }
@@ -190,17 +198,23 @@ h1 {
   flex-direction: column;
   width: max-content;
 }
+
 textarea {
-  resize: none;
+  /*resize: none;*/
   padding: 0.5em;
   border: solid 1px #444;
   border-radius: 10px;
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+
 }
+.prev-sub{
+  align-content: center;
+}
+
 .navigators {
   display: flex;
   position: fixed;
-  top: 80%;
+  top: 85%;
   place-content: center;
   flex-direction: row;
 }
@@ -243,7 +257,7 @@ input:focus {
   outline: none;
 }
 
-.container {
+.container-complete {
   display: flex;
   place-content: center;
   width: fit-content;
@@ -251,6 +265,13 @@ input:focus {
   border: solid 1px #444;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  max-width: 750px;
+  margin: 25px auto;
+  overflow-y: scroll;
+  min-height: 250px;
+  border: 1px solid lightgray;
+  padding: 25px;
+
 }
 
 button {
@@ -264,14 +285,16 @@ button {
   font-weight: 600;
 }
 
-.stage {
+.stage-complete {
   position: relative;
-  width: 40%;
+  width: 85%;
   display: flex;
   justify-content: space-around;
+
+  
 }
 
-.stage button {
+.stage-complete button {
   background: #444;
   width: 30px;
   height: 30px;
@@ -281,7 +304,7 @@ button {
   background: green !important;
 }
 
-.page {
+.page-complete {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -289,9 +312,16 @@ button {
   width: 100%;
   height: 100%;
   position: absolute;
+  margin-top: 8rem;
 }
 
 .prev-submit {
   display: flex;
 }
+
+.bio-screen{
+  flex:auto;
+  align-items: center;
+}
+
 </style>

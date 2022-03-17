@@ -22,8 +22,6 @@ export const dbService = {
 
 const api = "http://localhost:3000/";
 
-
-
 function getEvents() {
   return dbRequest("GET", null, "events");
 }

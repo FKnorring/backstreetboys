@@ -161,11 +161,6 @@
       "id": 33
     },
     {
-      "email": "lasse@laser",
-      "password": "$2a$10$4etukDNdxW55tf5gnjYT7ukkOIofxmAmGOpf1G99Odsv8I7919ZGS",
-      "id": 34
-    },
-    {
       "email": "10@gmail.com",
       "password": "$2a$10$WmWnEpcLx0JmElm9l/TDkOY3KK6FNx9bu4IOojZFHXFDmmafzBljS",
       "id": 35
@@ -179,6 +174,281 @@
       "email": "test@person",
       "password": "$2a$10$Ed0xvpOBH8sl/h2P7T/N8ubiA6W/dzeKkPX.LdMtHK2YScaInB1O2",
       "id": 37
+    },
+    {
+      "email": "fire@base",
+      "password": "$2a$10$TbcEk.iRGYbILd8QWpPNVOjMKgMalhV06u4JL/pK9vU5qiQ2IMvoy",
+      "id": 38
+    },
+    {
+      "email": "p@gmail.com",
+      "password": "$2a$10$ekqjx9J1PVc4wJR07Vlt.usJFz6rhviEMsTXzPl6MrEqLDP2ENx1u",
+      "id": 39
+    },
+    {
+      "email": "hej.da@gmail.com",
+      "password": "$2a$10$INt2pkI/6bDw5su/MMoN2uEy56tTH/8vN.OqY2.0n9Vkd/buEsJP2",
+      "id": 40
+    },
+    {
+      "email": "erik@gmail.com",
+      "password": "$2a$10$rxFBp4tDn5mw7ERhPfSxPeGoaR7X3RMgxqSkWAb5i4BWWdOuBHWgG",
+      "id": 41
+    },
+    {
+      "email": "greta@thunberg.se",
+      "password": "$2a$10$DpIEMkX7i.EkyucRvucz9OUUpvUvChR0qLJJulw/3vfD.eIsb2nMq",
+      "id": 42
+    },
+    {
+      "email": "hej@gmail.com",
+      "password": "$2a$10$GAjaaZ.IDModqGzX1y40XODRqRgw8wvUqKc8AqRAmPpiuFUH8B8JS",
+      "id": 43
+    },
+    {
+      "email": "erika@gmail.com",
+      "password": "$2a$10$xF.vuj6pkS6vdg2BpH18H.9yUPZrX0xAAfS829NBJrz0a.48ZBRWa",
+      "id": 44
+    },
+    {
+      "email": "michelle@obama.com",
+      "password": "$2a$10$8KzqxAJFSORd4exZisk21u4NEDNUSAZMT6JDFjwetx/jDUSkXNQDG",
+      "id": 45
+    },
+    {
+      "email": "glad@gmail.com",
+      "password": "$2a$10$znAy02cnx609DrEm6/CRFeAMPlMsUH5VOjIFbkjU6HtoQV2y94CKu",
+      "id": 46
+    },
+    {
+      "email": "joe@rogan.com",
+      "password": "$2a$10$iq96RO4B5mpMkj8N9sUM9OSABs6MFDrnH4lDhVVKg2tV9byB1w.Pm",
+      "id": 47
+    },
+    {
+      "email": "lasse@gmail.com",
+      "password": "$2a$10$Kwxki4xxGfe9mMdw.p9/QO.v.NX3pj4/7ZlRaC8kGwQz2rZGHD4QO",
+      "id": 48
+    },
+    {
+      "email": "min@gmail.com",
+      "password": "$2a$10$9.kNxQntSV6Snocf4oEYkeIn8cKia18KLvlUUg558wZjaVqhgiu.S",
+      "id": 49
+    },
+    {
+      "email": "pog@live.se",
+      "password": "$2a$10$nGJCgYcFGEc/vXITjqptbO2uNoVjltVxohP9R57lFTcz/MRuWahAq",
+      "id": 50
+    },
+    {
+      "email": "ola@conny",
+      "password": "$2a$10$Wgf8BkGEDQ/byd0hzgAvW.XxCCXAbwp7OUvXW2953atJOijjNfifO",
+      "id": 51
+    },
+    {
+      "email": "lisa@hotmail.com",
+      "password": "$2a$10$aE/nVx8YMY8/kXPn0SD.Hu4PWPAYUvPhqdspplerbamTLhH4L33.e",
+      "id": 52
+    },
+    {
+      "email": "lasselina@gmail.com",
+      "password": "$2a$10$.5BDjbWPRcw/K.E29/gTauHJzlucetgf/8/D4G2LRwhppc6jcu3oe",
+      "id": 53
+    },
+    {
+      "email": "vodka@gmail.com",
+      "password": "$2a$10$VbQLWo3yDQtjryud7csFeujLkusw..XNN8S4q/V1.tfRgiiZ8MZVG",
+      "id": 54
+    },
+    {
+      "email": "pogU@gmail.se",
+      "password": "$2a$10$lDbn7/bmPaeP2vMAvDpag.lqDzxlBTgAwKFXKI7RYYQC/0hQIaC/6",
+      "id": 55
+    },
+    {
+      "email": "Emil@wormbs.com",
+      "password": "$2a$10$4aljix6QkA.LD25Qn29Fju7FrG2cdv7CzvbUJJzGjixY90XBfEuX6",
+      "id": 56
+    },
+    {
+      "email": "greta@thunberg.com",
+      "password": "$2a$10$pq.x0gShhHuQkMSiJezGjeIyvFFgBchMmLtG9eXmmG0ZKT0yI1QHm",
+      "id": 57
+    },
+    {
+      "email": "pogO@live.se",
+      "password": "$2a$10$oUmXQAjQJI5.qXqDb4QeNuboMqlctMtNRfLRlmtwRUKQ0.M45P9bi",
+      "id": 58
+    },
+    {
+      "email": "Donald@trump@gmail.com",
+      "password": "$2a$10$E5vxlYk4PqM25OcDg/X1keQg33BieWE00NP5oegIFarOXe34HHt4e",
+      "id": 59
+    },
+    {
+      "email": "deadge@live.se",
+      "password": "$2a$10$KvQZIICxVqfVP.OQWVCiAuQTlvaC9xUQ7cmOY5CsXDbBLCdxc/wDi",
+      "id": 60
+    },
+    {
+      "email": "madicken@gmail.com",
+      "password": "$2a$10$MIdsBBOFUgVB/UxLf8V6FuM2VjHmfZl7F9fWAeHm49p0M.iXUG3kW",
+      "id": 61
+    },
+    {
+      "email": "majs@gmail.com",
+      "password": "$2a$10$u1BHgAap.gk6k.OXtBsMAOZs0KMnqjGxwaoRFvFhw46XtA2PeAwLi",
+      "id": 62
+    },
+    {
+      "email": "lol@gmail.com",
+      "password": "$2a$10$S3jvEzblt/zIZ0kXVchmJeZq0nr7jLI8VLCS1mfh7ZgN2BWr6dGPa",
+      "id": 63
+    },
+    {
+      "email": "satan@gmail.com",
+      "password": "$2a$10$q2zSOm.dFhVs2nPdibLCouzNUdnH8OjqC5aZD7gXm7uj0YhPbi8SK",
+      "id": 64
+    },
+    {
+      "email": "stefan@löfven.com",
+      "password": "$2a$10$iDr0EjapfbsmE6Y4PDu3vu9jCeUOwirtdGt86WDREVHsAolbiy8Vy",
+      "id": 65
+    },
+    {
+      "email": "carola@gmail.com",
+      "password": "$2a$10$iD713y1rfUeuQtLbyefy2OKo/SNy48X73oBnhFOgobfFm2naDa0cu",
+      "id": 66
+    },
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$1uIIjXyryzBiM/EjY7iaEO5zOGwWZC.Xo5My6DYNYLESMxeW.lne6",
+      "id": 67
+    },
+    {
+      "email": "Per.eriksson@hotmail.com",
+      "password": "$2a$10$kEzqcG6Ct/0wg8IQcE9rweY6xnB./LQwSKTXrSasP8uLHXI38iY6.",
+      "id": 68
+    },
+    {
+      "email": "mickan@gmail.com",
+      "password": "$2a$10$YGMRBFWfJGLJvEWgWMyaJuje1MeovJ8vM7R3dO5fELIQKn3QrjEge",
+      "id": 69
+    },
+    {
+      "email": "anna@berg",
+      "password": "$2a$10$iXIx.4KbrcrbzRw76kojuumAnyvIuqHD6hj2JnggQhomu097G/cM.",
+      "id": 70
+    },
+    {
+      "email": "aaa@live.se",
+      "password": "$2a$10$QQkmq7lMxWQLubC4szKlaO8997j32ctS.BcTUFNO0jfqKoQc73b3e",
+      "id": 71
+    },
+    {
+      "email": "Anna.Island@live.se",
+      "password": "$2a$10$ztdKGUpA/oO.3cHa759xEerh4.udlEVy2Ql0IWeA/xtb/lsSJjMl.",
+      "id": 72
+    },
+    {
+      "email": "kalle@gmail.com",
+      "password": "$2a$10$dBlSi42Mp3bzA9XItxhdXuugGX6vdovBYttqsBi/MiMEQG6SLJHYa",
+      "id": 73
+    },
+    {
+      "email": "jonna@gmail.com",
+      "password": "$2a$10$/IRIgMQfGEPKHnCAMciU.uo54YRmtXGfJ/hA8jX57.Mf1FI4.JrF6",
+      "id": 74
+    },
+    {
+      "email": "britta@c",
+      "password": "$2a$10$fqMtADrx2dVz8bEuHV2jJeicCQDKLRTiqNbsbndrk9gPfHpy3kAFi",
+      "id": 75
+    },
+    {
+      "email": "bbb@live.se",
+      "password": "$2a$10$sFdGkFeKfK3l/B6b6i/YGu06JCy5.sU9AVuKM4hVB3uz5opbb1Tii",
+      "id": 76
+    },
+    {
+      "email": "Herman.fridhed@gmail.com",
+      "password": "$2a$10$0yL8LncRv7DYmu0OwhHJZ.hJUc3BP830pDaOSRVDhHOOoxB1kDclq",
+      "id": 77
+    },
+    {
+      "email": "jonas@j",
+      "password": "$2a$10$Jnb.jNydyL2URHSypjXGQe6sCflr8qYCHb8Lt.9EbqxctX.lJkgTq",
+      "id": 78
+    },
+    {
+      "email": "Agnes@gmail.com",
+      "password": "$2a$10$tnZ9HDPdm7l2Ipi9R6mHPe8TvLFe.1bu6BlQP3P0MdyI7LEAHA8CC",
+      "id": 79
+    },
+    {
+      "email": "Stefan@gmail.com",
+      "password": "$2a$10$0EqsdLk01ngUcjQJcWk8WuLp0YelSLvhmC/MizVOonpe1mIeRdZre",
+      "id": 80
+    },
+    {
+      "email": "pelle@p",
+      "password": "$2a$10$0clwhQpXl7O35Q0CyzJkZupvV6xrN3fAtkZRBC5wKy6gBEJgAefx2",
+      "id": 81
+    },
+    {
+      "email": "Polly.hammarstrand@gmail.com",
+      "password": "$2a$10$8gN092z0Vxo9ZrPh9Eov/usinCtdm42S0IcNysif2WXKvmqGDgkUG",
+      "id": 82
+    },
+    {
+      "email": "ccc@live.se",
+      "password": "$2a$10$csDX..QjRt7/pOUK3tLQOuVfG.flmW2b2Vz/GJyPt4Yvi/A2jqPtm",
+      "id": 83
+    },
+    {
+      "email": "lars@gmail.com",
+      "password": "$2a$10$14ezP2PME0rgFxyQb2EJEOpws/OdlaJOFq21eOews0gdkTB0nhNZC",
+      "id": 84
+    },
+    {
+      "email": "hejsan@gmail.com",
+      "password": "$2a$10$xw0At66LUSla3tkBX0ABD.I.XaOxsN6ubPjABKPPpyZPOkuu7kh1u",
+      "id": 85
+    },
+    {
+      "email": "Simon.soderlund@gmail.com",
+      "password": "$2a$10$O/0s1/4R3CCSao3PZNX6Vutz2nR1sIVwQcu.yW.y5rsDYg1ySeuG2",
+      "id": 86
+    },
+    {
+      "email": "ddd@live.se",
+      "password": "$2a$10$MFpSZkPAivELJ3nVlEKD6u84FsgZYaB0K8Jnfy.HfofFOyzgox152",
+      "id": 87
+    },
+    {
+      "email": "oliviah@gmail.com",
+      "password": "$2a$10$IlM8PXjAiN84zjSN3/VDsuORpwqi73OCFgAeGwXOHHLs5zH74dQ96",
+      "id": 88
+    },
+    {
+      "email": "Astridh@gmail.com",
+      "password": "$2a$10$jUswFCHZ634CQoCvRUJwTOOnLUivLpj/cBeh/TbwSAu7tRbJdde.O",
+      "id": 89
+    },
+    {
+      "email": "eskil@s",
+      "password": "$2a$10$WayG.Kb8WYuF6eU7OPtaw.fse1ORoRj1Y/Bl4OdTX8TNleTQR6HcS",
+      "id": 90
+    },
+    {
+      "email": "filip@vk",
+      "password": "$2a$10$5k2RmD5wn0WTnHL5gY7vquCLJ1exHGsjyHJNAjzV0p7uIlmf5XHPa",
+      "id": 91
+    },
+    {
+      "email": "filip@v",
+      "password": "$2a$10$GAKBHG3ey3xi5DamBybmN.j6CkG/1.5zcck/PIIWajPCrxL/3MCIq",
+      "id": 92
     }
   ],
   "profiles": [
@@ -1566,55 +1836,6 @@
       "id": 38
     },
     {
-      "name": "Ellen Karlsson",
-      "gender": "Female",
-      "phonenumber": "070464006",
-      "age": 23,
-      "occupation": "Läkare",
-      "interests": [
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false
-      ],
-      "weights": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        1,
-        1,
-        1,
-        0,
-        0
-      ],
-      "bio": "Tränar är glad hej,",
-      "myEvents": [
-        11,
-        13
-      ],
-      "previousMatches": [],
-      "userId": 34,
-      "id": 39
-    },
-    {
       "name": "Herman Hermansson",
       "gender": "Male",
       "phonenumber": "112",
@@ -1811,9 +2032,9 @@
     }
   ],
   "stage": {
+    "stage": 0,
+    "state": "waiting",
     "event": 12,
-    "started": "false",
-    "stage": 1,
-    "state": "waiting"
+    "started": "false"
   }
 }

@@ -1,155 +1,110 @@
 <template>
-  <div>
-    <h1>My events</h1>
-    <div class="scrollbox">
-      <div v-for="event in myEvents" :key="event" class="events">
-        <h2>{{ event.name }}</h2>
-        <h3>{{ event.location }}</h3>
-        <h3>{{ event.time }}</h3>
-        <button
-          @click="joinEvent(event)"
-          class="joinButton"
-          :class="{ active: event.hasStarted }"
-        >
-          Go to event
-        </button>
-        <button @click="leaveEvent(event.id)" class="leaveButton">
-          Leave event
-        </button>
-      </div>
-      <p>{{ secretMessage }}</p>
+  <BG />
+  <Loader v-if="!loaded"/>
+  <div v-if="loaded" class="page">
+    <div class="logo">
+      <Logo size="5"></Logo>
     </div>
+    <div class="welcome">
+      <h4>Welcome {{ username }}</h4>
+      <h5 v-if="activeEvent" style="color: red">You have one active event!</h5>
+    </div>
+    <div
+      @click="this.$router.push('/upcomingevents')"
+      class="cardhome upcoming"
+    >
+      <h4>Upcoming events</h4>
+      <fa class="black" icon="calendar" />
+    </div>
+    <div
+      @click="this.$router.push('/myevents')"
+      class="cardhome my"
+      :class="{ active: activeEvent }"
+    >
+      <h4>My events</h4>
+      <fa class="black" icon="calendar-check" />
+    </div>
+    <div
+      @click="this.$router.push('/previousmatches')"
+      class="cardhome previous"
+    >
+      <h4>Previous matches</h4>
+      <fa class="black" icon="heart" />
+    </div>
+    <div @click="this.$router.push('/profile')" class="cardhome profile">
+      <h4>Profile</h4>
+      <fa class="black" icon="user" />
+    </div>
+    <p @click="logout" class="logout">Log out</p>
   </div>
+
 </template>
 
 <script>
-import { dbService } from "../services/dbservice";
+// import { dbService } from "../services/dbservice";
 import { firestoreDB } from "../services/db";
+import Logo from "../components/Logo.vue";
+import BG from "../components/BG.vue";
+import Loader from "../components/Loader.vue"
 export default {
   data() {
     return {
-      myEvents: [],
-      secretMessage: "",
+      activeEvent: false,
+      events: [],
       username: "",
+      loaded: false,
     };
   },
   methods: {
-    async leaveEvent(id) {
-      let user = JSON.parse(localStorage.getItem("user")).user;
-      //let profile = await dbService.getProfile(user.id);
-      let profile = await firestoreDB.getProfile(user.id);
-      let myEventIds = profile[0].myEvents; //My Event Ids --> Lägg till id här.
-      let profileId = profile[0].id;
-
-      let updatedIds = myEventIds.filter((ids) => ids != id);
-      profile[0].myEvents = updatedIds;
-      console.log(profile[0]);
-      //await dbService.updateProfile(profile[0], profileId);
-      await firestoreDB.updateProfile(profile[0], profileId);
-
-      // Hämta och lämna eventet i event databasen
-      if (profile[0].gender === "Male") {
-        //let event = await dbService.getEvent(id);
-        let event = await firestoreDB.getEvent(id);
-        let eventUsers = event.eventUsersMale;
-        let updatedEventUsers = eventUsers.filter((ids) => ids != user.id);
-        event.eventUsersMale = updatedEventUsers;
-        let updatedActiverUsers = event.activeUsersMale.filter(
-          (ids) => ids != user.id
-        );
-        event.activeUsersMale = updatedActiverUsers;
-        await firestoreDB.updateEvent(event, id);
-        //await dbService.updateEvent(event, id);
-      } else {
-        // Female
-       // let event = await dbService.getEvent(id);
-        let event = await firestoreDB.getEvent(id);
-        let eventUsers = event.eventUsersFemale;
-        let updatedEventUsers = eventUsers.filter((ids) => ids != user.id);
-        event.eventUsersFemale = updatedEventUsers;
-        let updatedActiverUsers = event.activeUsersFemale.filter(
-          (ids) => ids != user.id
-        );
-        event.activeUsersFemale = updatedActiverUsers;
-        //await dbService.updateEvent(event, id);
-        await firestoreDB.updateEvent(event, id);
-      }
-      //
-      let updatedMyEvents = this.myEvents.filter((ids) => ids.id != id);
-      this.myEvents = updatedMyEvents;
-    },
-    async joinEvent(currentEvent) {
-      if (!currentEvent.hasStarted) return;
-      let id = currentEvent.id;
-
-      //let event = await dbService.getEvent(id);
-      let event = await firestoreDB.getEvent(id);
-      let user = JSON.parse(localStorage.getItem("user")).user;
-      //let profile = await dbService.getProfile(user.id);
-      let profile = await firestoreDB.getProfile(user.id);
-
-      if (profile[0].gender === "Male") {
-        let updatedUsers = event.activeUsersMale;
-        if (!updatedUsers.includes(user.id)) {
-          updatedUsers.push(user.id);
-          event.activeUsersMale = updatedUsers;
-          //await dbService.updateEvent(event, id);
-          await firestoreDB.updateEvent(event, id);
-
-          //Uppdater en bool (Ändrar knappen)
-        }
-      } else {
-        let updatedUsers = event.activeUsersFemale;
-        if (!updatedUsers.includes(user.id)) {
-          updatedUsers.push(user.id);
-          event.activeUsersFemale = updatedUsers;
-          //await dbService.updateEvent(event, id);
-          await firestoreDB.updateEvent(event, id);
-
-          console.log("Fanns ej");
-        }
-      }
-      //Skicka till live event
-      this.$router.push("/EventStage");
+    logout() {
+      localStorage.removeItem("user");
+      this.$router.push("/login");
     },
   },
   async created() {
     let user = JSON.parse(localStorage.getItem("user")).user;
     //let profile = await dbService.getProfile(user.id);
     let profile = await firestoreDB.getProfile(user.id);
-    let eventIds = profile[0].myEvents;
-
-    for (var currentEvent of eventIds) {
-      //let event = await dbService.getEvent(currentEvent);
-      let event = await firestoreDB.getEvent(currentEvent);
-      let eventHasStarted = event.eventHasStarted;
-      let eventName = event.eventName;
-      let eventLocation = event.eventLocation;
-      let eventTime = Date(event.eventTime).toString();
-      let eventId = event.id;
-      let eventInfo = {
-        name: eventName,
-        location: eventLocation,
-        time: eventTime,
-        id: eventId,
-        hasStarted: eventHasStarted,
-      };
-      this.myEvents.push(eventInfo);
-    }
+    this.username = profile.name;
+    profile.myEvents.forEach(async eventId => {
+      let event = await firestoreDB.getEvent(eventId)
+      if (event.eventHasStarted) this.activeEvent = true;
+    })
+    this.loaded = true;
   },
+  components: { Logo, BG, Loader },
 };
 </script>
 
 <style scoped>
+.logo {
+  margin-top: 75px;
+}
+
 .events {
-  border-style: solid;
-  width: 70%;
-  margin: auto;
-  margin-top: 2em;
+  border: none;
+  border-top: solid 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  height: min-content;
+  background: #e2b37d;
+  transition: height 0.5s ease;
 }
 
 .scrollbox {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  outline: solid 1px black;
 }
 
 .joinButton {
@@ -160,5 +115,73 @@ export default {
 .active {
   cursor: pointer;
   background: green;
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myevents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardhome {
+  display: flex;
+  width: 65vw;
+  padding: 0 10vw;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.3);
+  outline: outset 1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  cursor: pointer;
+}
+
+.upcoming {
+  background-image: url("../assets/angstrom_interior_1100.jpg");
+  background-size: 100%;
+}
+
+.previous {
+  background-image: url("../assets/mountains.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.my {
+  background-image: url("../assets/people.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.active {
+  box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7), 0px 0px 8px rgba(255, 0, 0, 1);
+  text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7), 0px 0px 8px rgba(255, 0, 0, 1);
+}
+
+.profile {
+  background-image: url("../assets/profile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.black {
+  color: #222;
+}
+
+.logout {
+  font-weight: 500;
+  cursor: pointer;
 }
 </style>
