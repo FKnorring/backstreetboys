@@ -44,11 +44,15 @@ export default {
       activeUsersMale: [],
       eventUsersFemale: [],
       activeUsersFemale: [],
+      eventMatches: [],
       eventName: "",
       eventLocation: "",
       eventInfo: "",
       eventTime: "",
       eventHasStarted: false,
+      eventMatches1: [],
+      eventMatches2: [],
+      eventMatches3: [],
     };
   },
   methods: {
@@ -68,13 +72,19 @@ export default {
         eventTime: this.eventTime,
         eventLocation: this.eventLocation,
         eventInfo: this.eventInfo,
-        eventHasStarted : this.eventHasStarted
+        eventHasStarted: this.eventHasStarted,
+        eventMatches1: this.eventMatches1,
+        eventMatches2: this.eventMatches2,
+        eventMatches3: this.eventMatches3,
       };
       this.$emit("add-event", newEvent);
       this.eventUsersMale = [];
       this.activeUsersMale = [];
       this.eventUsersFemale = [];
       this.activeUsersFemale = [];
+      this.eventMatches1 = [];
+      this.eventMatches2 = [];
+      this.eventMatches3 = [];
       this.eventName = "";
       this.eventLocation = "";
       this.eventInfo = "";
@@ -96,11 +106,13 @@ export default {
   display: block;
 }
 .form-control input {
-  width: 100%;
+  width: 90%;
   height: 40px;
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+  border-radius: 10px;
+  border: none;
 }
 .form-control-check {
   display: flex;
@@ -113,5 +125,9 @@ export default {
 .form-control-check input {
   flex: 2;
   height: 20px;
+}
+
+label {
+  color: white;
 }
 </style>

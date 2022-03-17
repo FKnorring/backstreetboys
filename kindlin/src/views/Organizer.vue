@@ -1,36 +1,36 @@
 <template>
-  <Header @toggle-add-event="toggleAddEvent" title="Events" />
-  <div class="container">
-    <Button @toggle-add-event=toggleAddEvent() text="Add event" color="green" />
-    <div v-show="showAddEvent">
-    <AddEvent @add-event="addEvent" />
+  <Loader v-if="!loaded"></Loader>
+  <div v-if="loaded" class="background">
+    <h1>All events</h1>
+    <Button
+      class="addEvent"
+      @toggle-add-event="toggleAddEvent()"
+      text="Add event"
+      color="green"
+    />
+    <div class="container">
+      <div v-show="showAddEvent">
+        <AddEvent @add-event="addEvent" />
+      </div>
+      <Events @delete-event="deleteEvent" class="eventorg" :events="events" />
     </div>
-    <Events @delete-event="deleteEvent" class="event" :events="events" />
   </div>
-  <!--  
-  <li v-for="user in users" :key="user">
-
-    {{ user.email }} <button @click="showUser(user.id)">{{ user.id }}</button>
-    <p v-show="user.id === userId">{{ profile }}</p>
-  </li>
- -->
 </template>
 
 <script>
-import { dbService } from "../services/dbservice";
-import Header from "../components/Header";
+import { firestoreDB } from "../services/db";
 import Events from "../components/Events";
 import Button from "../components/Button";
 import AddEvent from "../components/AddEvent";
+import Loader from "../components/Loader.vue"
 
 export default {
-  
   name: "Organizer",
   components: {
-    Header,
     Events,
     Button,
     AddEvent,
+    Loader
   },
   data() {
     return {
@@ -39,64 +39,91 @@ export default {
       users: [],
       userId: -1,
       profile: {},
+      loaded: false,
     };
   },
   methods: {
     toggleAddEvent() {
-      this.showAddEvent = !this.showAddEvent
+      firestoreDB.getNextEventId();
+      this.showAddEvent = !this.showAddEvent;
     },
-    addEvent(event) {
-      console.log(event);
+    async addEvent(event) {
       this.events = [...this.events, event];
-      console.log(this.event);
-      dbService.addEvent(event);
-      
+      event.id = await firestoreDB.getNextEventId();
+      firestoreDB.addEvent(event);
     },
     deleteEvent(id) {
       if (confirm("Are you sure?")) {
         this.events = this.events.filter((event) => event.id !== id);
-         dbService.removeEvent(id);
+        firestoreDB.removeEvent(id);
       }
     },
     async showUser(id) {
       if (this.userId === id) {
         return (this.userId = -1);
       }
-      const profile = await dbService.getProfile(id);
+      const profile = await firestoreDB.getProfile(id);
       this.profile = profile[0];
       this.userId = id;
     },
   },
 
   async created() {
-    this.events = await dbService.getEvents(); //hämta events;
-    
+    this.events = await firestoreDB.getEvents(); //hämta events;
+    this.loaded = true;
   },
 };
 </script>
 
 <style>
 .container {
-  max-width: 1000px;
-  margin: 30px auto;
-  overflow: auto;
-  min-height: 300px;
-  border: 1px solid steelblue;
-  padding: 30px;
-  border-radius: 5px;
+  max-width: 750px;
+  margin: 25px auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 250px;
+  background: #444;
+  /*border: 1px solid lightgray;*/
+  padding: 25px;
+  border-radius: 25px;
+  height: 60%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.background {
+  background-image: url("../assets/tomas.jpg");
+  background-size: cover;
+  position: absolute;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
 }
 
 .btn {
   display: inline-block;
-  background: #000;
-  color: #fff;
+  background: green;
+
   border: none;
   padding: 10px 20px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   text-decoration: none;
   font-size: 15px;
   font-family: inherit;
+}
+
+.eventorg {
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  align-content: row;
+}
+
+.addEvent {
+  float: center;
 }
 </style>

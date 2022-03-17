@@ -8,7 +8,8 @@ import Organizer from "../views/Organizer.vue";
 import PreviousMatches from "../views/PreviousMatches.vue";
 import UpcomingEvents from "../views/UpcomingEvents.vue";
 import EventStage from "../views/EventStage.vue";
-
+import LiveEvent from "../views/LiveEvent.vue";
+import MyEvents from "../views/MyEvents.vue"
 
 const routes = [
   {
@@ -55,7 +56,17 @@ const routes = [
     path: "/EventStage",
     name: "EventStage",
     component: EventStage,
-  }
+  },
+  {
+    path: "/LiveEvent",
+    name: "LiveEvent",
+    component: LiveEvent,
+  },
+  {
+    path: "/MyEvents",
+    name: "MyEvents",
+    component: MyEvents,
+  },
 ];
 
 const router = createRouter({

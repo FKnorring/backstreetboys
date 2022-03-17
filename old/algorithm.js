@@ -1,97 +1,39 @@
-const user1 = {
-   name: "Elis",
-   interests: [1, 1, 1, 0],
-   weigths: [1, 0, 0, 1],
-   gender: "male",
-};
-const user2 = {
-   name: "Nisse",
-   interests: [1, 1, 0, 0],
-   weigths: [1, 1, 4, 0],
-   gender: "male",
-};
-const user3 = {
-   name: "Filippa",
-   interests: [1, 0, 1, 1],
-   weigths: [1, 1, 0, 1],
-   gender: "female",
-};
-const user4 = {
-   name: "Erika",
-   interests: [1, 1, 0, 1],
-   weigths: [1, 1, 2, 0],
-   gender: "female",
+import jsonusers from "./users.json";
+
+const users = [...jsonusers.males, ...jsonusers.females];
+//console.log(users)
+//console.log(users[0].interests)
+function getMatchScore(user, matchee) {
+  let weights = user.weights;
+  let interests = matchee.interests.map((v) => (v ? 1 : 0));
+  return interests.map((v, i) => v * weights[i]).reduce((sum, a) => sum + a, 0);
 };
 
-const users = [user1, user2, user3, user4];
+function filterGender(list, gender) {
+   return list.filter(user => user.gender != gender);
+}
 
-const getMatchScore = (user, matchee) => {
-   let weights = user.weigths;
-   let interests = matchee.interests;
+function bestMatch(user, matches) {
+   return matches.reduce((prev, current) => {
+      return getMatchScore(user, prev) > getMatchScore(user, current) ? prev : current
+    })
+}
 
-   return interests
-      .map((v, i) => v * weights[i])
-      .reduce((sum, a) => sum + a, 0);
+function filterIds(list, id1, id2) {
+   return list.filter(user => {
+      return user.userId != id1 && user.userId != id2
+   })
+}
+
+function getMatches (users) {
+  let matches = [];
+  while (users.length > 0) {
+    let user = users[0];
+    let possilbleMatches =  filterGender(users,user.gender)
+    let match = bestMatch(user, possilbleMatches)
+    users = filterIds(users, user.userId, match.userId);
+    matches.push({matcher: user.name, matchee: match.name})
+  }
+  return matches
 };
 
-const getMen = (users) => {
-   return users.filter((user) => user.gender === "male");
-};
-
-const getWonen = (users) => {
-   return users.filter((user) => user.gender === "female");
-};
-
-const getMenMatchScores = (users) => {
-   let { men, women } = { men: getMen(users), women: getWonen(users) };
-
-   men.forEach(
-      (man, i) =>
-         (men[i] = {
-            name: man.name,
-            matches: women.map((woman) => {
-               return { match: woman.name, score: getMatchScore(man, woman) };
-            }),
-         })
-   );
-
-   return men;
-};
-
-const getWomenMatchScores = (users) => {
-   let { men, women } = { men: getMen(users), women: getWonen(users) };
-
-   women.forEach(
-      (woman, i) =>
-         (women[i] = {
-            name: woman.name,
-            matches: men.map((man) => {
-               return { match: man.name, score: getMatchScore(woman, man) };
-            }),
-         })
-   );
-
-   return women;
-};
-
-const getAllMatchScores = (users) => {
-   return getMenMatchScores(users).concat(getWomenMatchScores(users));
-};
-
-const getBestMatches = (matches) => {
-   return matches.map((match) => {
-      return {
-         name: match.name,
-         bestMatch: match.matches.reduce((prev, current) => {
-            return prev.score > current.score ? prev : current;
-         }),
-      };
-   });
-};
-
-let match = getAllMatchScores(users);
-
-console.log(user1);
-console.log(getMatchScore(user2, user1));
-console.log(match[0]);
-console.log(getBestMatches(match));

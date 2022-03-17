@@ -1,4 +1,3 @@
-
 <template>
   <button @click="onClick()" :style="{ background: color }" class="btn">
     {{ text }}
@@ -7,7 +6,7 @@
 
 <script>
 export default {
-  name: 'Button',
+  name: "Button",
   props: {
     text: String,
     color: String,
@@ -15,9 +14,14 @@ export default {
   methods: {
     onClick() {
       this.$emit("toggle-add-event");
-      console.log("click");
-
     },
   },
-}
+};
 </script>
+
+<style scoped>
+button {
+  color: white;
+  border-radius: 10px;
+}
+</style>

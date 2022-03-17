@@ -95,7 +95,7 @@ function getProfile(id) {
 }
 
 function getMatches(id) {
-  return dbRequest("GET", null, "previousmatches?userId=" + id);
+  return dbRequest("GET", null, "previousMatches?userId=" + id);
 }
 
 function getEvent(id) {
